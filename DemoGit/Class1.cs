@@ -8,4 +8,8 @@ public class Class1
 		/*Demo Git pull*/
 		string abc = "a";
 	}
+	public class demo()
+	{
+
+	}
 }
