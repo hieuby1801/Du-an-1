@@ -6,5 +6,6 @@ public class Class1
 	{
 		const int a = 1;
 	/*Demo Git pull*/
+	int b = 2;
 	}
 }
