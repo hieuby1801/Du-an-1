@@ -6,6 +6,6 @@ public class Class1
 	{
 		const int a = 1;
 		/*Demo Git pull*/
-		string abc = "a";
+		string abc = "ab";
 	}
 }
