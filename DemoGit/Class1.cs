@@ -12,6 +12,7 @@ public class Class1
 	{
 		string hmm = "hii";
 		string h = "hoangdtr"
+			string h = "all";
 
 	}
 }
