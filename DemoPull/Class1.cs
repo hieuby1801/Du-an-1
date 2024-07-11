@@ -4,6 +4,6 @@ public class Class1
 {
 	public Class1()
 	{
-		string a = "Abc";
+		string b = "";
 	}
 }
