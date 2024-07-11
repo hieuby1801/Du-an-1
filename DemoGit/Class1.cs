@@ -11,6 +11,7 @@ public class Class1
 	public class demo()
 	{
 		string hmm = "hii";
+		string h = "hoangdtr"
 
 	}
 }
