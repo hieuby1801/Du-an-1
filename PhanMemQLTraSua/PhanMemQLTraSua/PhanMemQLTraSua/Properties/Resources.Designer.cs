@@ -69,5 +69,46 @@ namespace PhanMemQLTraSua.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_milk_tea_shop_poster_background_material_image_150838 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-milk-tea-shop-poster-background-material-image_150838", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_product_promotion_podium_vibrant_yellow_base_and_leafy_green_accents_in_picture_image_5592220 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-product-promotion-podium-vibrant-yellow-base-and-leafy-green-accents-in-p" +
+                        "icture-image_5592220", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tải_xuống__1_ {
+            get {
+                object obj = ResourceManager.GetObject("tải xuống (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thiet_ke_web_quan_ly_nhan_su_990x400 {
+            get {
+                object obj = ResourceManager.GetObject("thiet-ke-web-quan-ly-nhan-su-990x400", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

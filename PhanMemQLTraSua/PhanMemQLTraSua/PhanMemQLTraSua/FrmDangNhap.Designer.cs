@@ -35,9 +35,11 @@
             this.llbllienhe = new System.Windows.Forms.LinkLabel();
             this.llblhuongdan = new System.Windows.Forms.LinkLabel();
             this.rdohienmatkhau = new System.Windows.Forms.RadioButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lbltaikhoang
@@ -111,6 +113,16 @@
             this.rdohienmatkhau.Text = "Hiển Thị Mật Khẩu";
             this.rdohienmatkhau.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(461, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(230, 46);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Đăng Nhập";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PhanMemQLTraSua.Properties.Resources.anh_ly_tra_sua_cute_hinh_nen_tra_sua_dep_nhat_03;
@@ -122,13 +134,13 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // pictureBox2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(386, 29);
+            this.label1.Location = new System.Drawing.Point(486, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 39);
+            this.label1.Size = new System.Drawing.Size(230, 46);
             this.label1.TabIndex = 8;
             this.label1.Text = "Đăng Nhập";
             // 
@@ -146,10 +158,10 @@
             this.Controls.Add(this.txtmatkhau);
             this.Controls.Add(this.lblmatkhau);
             this.Controls.Add(this.lbltaikhoang);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmDangNhap";
             this.Text = "FrmDangNhap";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +178,6 @@
         private System.Windows.Forms.RadioButton rdohienmatkhau;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
