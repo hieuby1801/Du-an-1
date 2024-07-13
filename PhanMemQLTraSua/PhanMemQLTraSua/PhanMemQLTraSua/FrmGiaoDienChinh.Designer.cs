@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGiaoDienChinh));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnNhanVien = new System.Windows.Forms.Button();
-            this.btnHoaDon = new System.Windows.Forms.Button();
-            this.btnSanPham = new System.Windows.Forms.Button();
-            this.btnThongKe = new System.Windows.Forms.Button();
-            this.btnLienHe = new System.Windows.Forms.Button();
             this.btnHuongDan = new System.Windows.Forms.Button();
+            this.btnLienHe = new System.Windows.Forms.Button();
+            this.btnThongKe = new System.Windows.Forms.Button();
+            this.btnSanPham = new System.Windows.Forms.Button();
+            this.btnHoaDon = new System.Windows.Forms.Button();
+            this.btnNhanVien = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,18 +59,57 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(871, 436);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // btnNhanVien
+            // btnHuongDan
             // 
-            this.btnNhanVien.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Image")));
-            this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanVien.Location = new System.Drawing.Point(17, 14);
-            this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Size = new System.Drawing.Size(256, 190);
-            this.btnNhanVien.TabIndex = 0;
-            this.btnNhanVien.Text = "Nhân Viên";
-            this.btnNhanVien.UseVisualStyleBackColor = true;
+            this.btnHuongDan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnHuongDan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuongDan.Image = ((System.Drawing.Image)(resources.GetObject("btnHuongDan.Image")));
+            this.btnHuongDan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHuongDan.Location = new System.Drawing.Point(597, 232);
+            this.btnHuongDan.Name = "btnHuongDan";
+            this.btnHuongDan.Size = new System.Drawing.Size(256, 190);
+            this.btnHuongDan.TabIndex = 5;
+            this.btnHuongDan.Text = "Hướng Dẫn";
+            this.btnHuongDan.UseVisualStyleBackColor = true;
+            // 
+            // btnLienHe
+            // 
+            this.btnLienHe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLienHe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLienHe.Image = ((System.Drawing.Image)(resources.GetObject("btnLienHe.Image")));
+            this.btnLienHe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLienHe.Location = new System.Drawing.Point(307, 232);
+            this.btnLienHe.Name = "btnLienHe";
+            this.btnLienHe.Size = new System.Drawing.Size(256, 190);
+            this.btnLienHe.TabIndex = 4;
+            this.btnLienHe.Text = "Liên Hệ";
+            this.btnLienHe.UseVisualStyleBackColor = true;
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
+            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKe.Location = new System.Drawing.Point(17, 232);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(256, 190);
+            this.btnThongKe.TabIndex = 3;
+            this.btnThongKe.Text = "Thống Kê";
+            this.btnThongKe.UseVisualStyleBackColor = true;
+            // 
+            // btnSanPham
+            // 
+            this.btnSanPham.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btnSanPham.Image")));
+            this.btnSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSanPham.Location = new System.Drawing.Point(597, 14);
+            this.btnSanPham.Name = "btnSanPham";
+            this.btnSanPham.Size = new System.Drawing.Size(256, 190);
+            this.btnSanPham.TabIndex = 2;
+            this.btnSanPham.Text = "Sản Phẩm";
+            this.btnSanPham.UseVisualStyleBackColor = true;
             // 
             // btnHoaDon
             // 
@@ -86,51 +125,18 @@
             this.btnHoaDon.UseVisualStyleBackColor = true;
             this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
             // 
-            // btnSanPham
+            // btnNhanVien
             // 
-            this.btnSanPham.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSanPham.Image = ((System.Drawing.Image)(resources.GetObject("btnSanPham.Image")));
-            this.btnSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSanPham.Location = new System.Drawing.Point(597, 14);
-            this.btnSanPham.Name = "btnSanPham";
-            this.btnSanPham.Size = new System.Drawing.Size(256, 190);
-            this.btnSanPham.TabIndex = 2;
-            this.btnSanPham.Text = "Sản Phẩm";
-            this.btnSanPham.UseVisualStyleBackColor = true;
-            // 
-            // btnThongKe
-            // 
-            this.btnThongKe.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.Location = new System.Drawing.Point(17, 232);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(256, 190);
-            this.btnThongKe.TabIndex = 3;
-            this.btnThongKe.Text = "Thống Kê";
-            this.btnThongKe.UseVisualStyleBackColor = true;
-            // 
-            // btnLienHe
-            // 
-            this.btnLienHe.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLienHe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLienHe.Location = new System.Drawing.Point(307, 232);
-            this.btnLienHe.Name = "btnLienHe";
-            this.btnLienHe.Size = new System.Drawing.Size(256, 190);
-            this.btnLienHe.TabIndex = 4;
-            this.btnLienHe.Text = "Liên Hệ";
-            this.btnLienHe.UseVisualStyleBackColor = true;
-            // 
-            // btnHuongDan
-            // 
-            this.btnHuongDan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnHuongDan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuongDan.Location = new System.Drawing.Point(597, 232);
-            this.btnHuongDan.Name = "btnHuongDan";
-            this.btnHuongDan.Size = new System.Drawing.Size(256, 190);
-            this.btnHuongDan.TabIndex = 5;
-            this.btnHuongDan.Text = "Hướng Dẫn";
-            this.btnHuongDan.UseVisualStyleBackColor = true;
+            this.btnNhanVien.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Image")));
+            this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhanVien.Location = new System.Drawing.Point(17, 14);
+            this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.Size = new System.Drawing.Size(256, 190);
+            this.btnNhanVien.TabIndex = 0;
+            this.btnNhanVien.Text = "Nhân Viên";
+            this.btnNhanVien.UseVisualStyleBackColor = true;
             // 
             // FrmGiaoDienChinh
             // 
