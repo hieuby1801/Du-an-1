@@ -70,6 +70,12 @@
     <Compile Include="FrmQLNhanVien.Designer.cs">
       <DependentUpon>FrmQLNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThongKe.Designer.cs">
+      <DependentUpon>FrmThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FrmQLSanPham.cs">
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmQLNhanVien.resx">
       <DependentUpon>FrmQLNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThongKe.resx">
+      <DependentUpon>FrmThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
