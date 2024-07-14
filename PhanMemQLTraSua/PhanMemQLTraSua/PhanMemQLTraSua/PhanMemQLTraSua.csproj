@@ -64,6 +64,12 @@
     <Compile Include="FrmHoaDon.Designer.cs">
       <DependentUpon>FrmHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmHuongDan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHuongDan.Designer.cs">
+      <DependentUpon>FrmHuongDan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmQLNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHoaDon.resx">
       <DependentUpon>FrmHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHuongDan.resx">
+      <DependentUpon>FrmHuongDan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmQLNhanVien.resx">
       <DependentUpon>FrmQLNhanVien.cs</DependentUpon>
