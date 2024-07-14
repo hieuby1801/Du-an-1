@@ -16,7 +16,7 @@ namespace PhanMemQLTraSua
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmQLNhanVien());
+            Application.Run(new FrmHoaDon());
         }
     }
 }
