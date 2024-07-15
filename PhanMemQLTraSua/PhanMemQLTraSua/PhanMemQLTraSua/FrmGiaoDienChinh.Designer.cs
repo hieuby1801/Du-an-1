@@ -145,6 +145,7 @@
             this.ClientSize = new System.Drawing.Size(938, 493);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FrmGiaoDienChinh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giao Diện Chính";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

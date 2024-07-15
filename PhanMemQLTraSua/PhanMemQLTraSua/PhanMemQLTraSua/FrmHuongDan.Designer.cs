@@ -72,6 +72,7 @@
             this.ClientSize = new System.Drawing.Size(467, 110);
             this.Controls.Add(this.panel1);
             this.Name = "FrmHuongDan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hướng Dẫn";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
