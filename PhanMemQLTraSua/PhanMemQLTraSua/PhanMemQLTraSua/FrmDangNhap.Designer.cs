@@ -69,6 +69,7 @@
             this.txtmatkhau.Name = "txtmatkhau";
             this.txtmatkhau.Size = new System.Drawing.Size(176, 22);
             this.txtmatkhau.TabIndex = 2;
+            this.txtmatkhau.UseSystemPasswordChar = true;
             // 
             // txttaikhoang
             // 
@@ -117,9 +118,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(461, 34);
+            this.label1.Location = new System.Drawing.Point(486, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 46);
+            this.label1.Size = new System.Drawing.Size(199, 39);
             this.label1.TabIndex = 8;
             this.label1.Text = "Đăng Nhập";
             // 
@@ -136,13 +137,11 @@
             // 
             // pictureBox2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(486, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 46);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Đăng Nhập";
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // FrmDangNhap
             // 
