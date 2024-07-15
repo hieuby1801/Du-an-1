@@ -68,7 +68,7 @@
             this.txtmatkhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtmatkhau.Name = "txtmatkhau";
             this.txtmatkhau.Size = new System.Drawing.Size(176, 22);
-            this.txtmatkhau.TabIndex = 2;
+            this.txtmatkhau.TabIndex = 3;
             this.txtmatkhau.UseSystemPasswordChar = true;
             // 
             // txttaikhoang
@@ -77,7 +77,7 @@
             this.txttaikhoang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txttaikhoang.Name = "txttaikhoang";
             this.txttaikhoang.Size = new System.Drawing.Size(176, 22);
-            this.txttaikhoang.TabIndex = 3;
+            this.txttaikhoang.TabIndex = 2;
             // 
             // llbllienhe
             // 
@@ -113,16 +113,18 @@
             this.rdohienmatkhau.TabStop = true;
             this.rdohienmatkhau.Text = "Hiển Thị Mật Khẩu";
             this.rdohienmatkhau.UseVisualStyleBackColor = true;
+            this.rdohienmatkhau.CheckedChanged += new System.EventHandler(this.rdohienmatkhau_CheckedChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(486, 34);
+            this.label1.Location = new System.Drawing.Point(432, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(199, 39);
             this.label1.TabIndex = 8;
             this.label1.Text = "Đăng Nhập";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -147,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 360);
+            this.ClientSize = new System.Drawing.Size(774, 360);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.rdohienmatkhau);
@@ -159,7 +161,7 @@
             this.Controls.Add(this.lbltaikhoang);
             this.Name = "FrmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmDangNhap";
+            this.Text = "Đăng Nhập";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

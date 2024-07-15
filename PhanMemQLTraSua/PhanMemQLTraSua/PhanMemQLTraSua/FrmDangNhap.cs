@@ -16,5 +16,16 @@ namespace PhanMemQLTraSua
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdohienmatkhau_CheckedChanged(object sender, EventArgs e)
+        {
+            txtmatkhau.UseSystemPasswordChar = false;
+            
+        }
     }
 }
