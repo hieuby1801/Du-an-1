@@ -15,6 +15,8 @@ namespace PhanMemQLTraSua
         public FrmDangNhap()
         {
             InitializeComponent();
+            this.Cb_ShowPass.CheckedChanged += new System.EventHandler(this.Cb_ShowPass_CheckedChanged);
+            //this.rdohienmatkhau.CheckedChanged += new System.EventHandler(this.rdohienmatkhau_CheckedChanged);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -22,10 +24,21 @@ namespace PhanMemQLTraSua
 
         }
 
-        private void rdohienmatkhau_CheckedChanged(object sender, EventArgs e)
+        private void Cb_ShowPass_CheckedChanged(object sender, EventArgs e)
         {
-            txtmatkhau.UseSystemPasswordChar = false;
-            
+            if (Cb_ShowPass.Checked)
+            {
+                txtmatkhau.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtmatkhau.UseSystemPasswordChar= true;
+            }
+        }
+
+        private void lblmatkhau_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
