@@ -39,6 +39,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btndangnhap = new System.Windows.Forms.Button();
             this.Cb_ShowPass = new System.Windows.Forms.CheckBox();
+            this.btnThoat = new System.Windows.Forms.Button();
             lblmatkhau = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -144,7 +145,7 @@
             // 
             this.btndangnhap.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btndangnhap.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btndangnhap.Location = new System.Drawing.Point(603, 227);
+            this.btndangnhap.Location = new System.Drawing.Point(524, 227);
             this.btndangnhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btndangnhap.Name = "btndangnhap";
             this.btndangnhap.Size = new System.Drawing.Size(102, 38);
@@ -165,11 +166,24 @@
             this.Cb_ShowPass.UseVisualStyleBackColor = true;
             this.Cb_ShowPass.CheckedChanged += new System.EventHandler(this.Cb_ShowPass_CheckedChanged);
             // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThoat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnThoat.Location = new System.Drawing.Point(641, 227);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(102, 38);
+            this.btnThoat.TabIndex = 12;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            // 
             // FrmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(819, 360);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.Cb_ShowPass);
             this.Controls.Add(this.btndangnhap);
             this.Controls.Add(this.pictureBox1);
@@ -203,5 +217,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btndangnhap;
         private System.Windows.Forms.CheckBox Cb_ShowPass;
+        private System.Windows.Forms.Button btnThoat;
     }
 }
