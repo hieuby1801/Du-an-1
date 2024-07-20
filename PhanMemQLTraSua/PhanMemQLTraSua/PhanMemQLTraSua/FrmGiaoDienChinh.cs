@@ -21,5 +21,23 @@ namespace PhanMemQLTraSua
         {
 
         }
+
+        private void FrmGiaoDienChinh_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            FrmQLNhanVien frmQLNhanVien = new FrmQLNhanVien();
+            this.Hide();
+            frmQLNhanVien.ShowDialog(); 
+            this.Show();
+        }
     }
 }

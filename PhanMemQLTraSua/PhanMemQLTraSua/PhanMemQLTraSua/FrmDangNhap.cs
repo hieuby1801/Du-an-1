@@ -49,7 +49,9 @@ namespace PhanMemQLTraSua
         private void btndangnhap_Click(object sender, EventArgs e)
         {
             FrmGiaoDienChinh frm = new FrmGiaoDienChinh();
-            frm.ShowDialog(this);
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
     }
 }

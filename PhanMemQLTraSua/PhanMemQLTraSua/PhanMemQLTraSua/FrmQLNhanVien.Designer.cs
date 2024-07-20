@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tblPnlMain = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewNhanVien = new System.Windows.Forms.DataGridView();
             this.tblPnlDataEntry = new System.Windows.Forms.TableLayoutPanel();
             this.txtTinhTrang = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
@@ -54,8 +54,9 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.tblPnlMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).BeginInit();
             this.tblPnlDataEntry.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -70,7 +71,7 @@
             this.tblPnlMain.AutoSize = true;
             this.tblPnlMain.ColumnCount = 1;
             this.tblPnlMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.51672F));
-            this.tblPnlMain.Controls.Add(this.dataGridView1, 0, 1);
+            this.tblPnlMain.Controls.Add(this.dataGridViewNhanVien, 0, 1);
             this.tblPnlMain.Controls.Add(this.tblPnlDataEntry, 0, 0);
             this.tblPnlMain.Controls.Add(this.tableLayoutPanel2, 0, 2);
             this.tblPnlMain.Location = new System.Drawing.Point(32, 26);
@@ -83,18 +84,18 @@
             this.tblPnlMain.TabIndex = 0;
             this.tblPnlMain.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
-            // dataGridView1
+            // dataGridViewNhanVien
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridViewNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 185);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(967, 252);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridViewNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNhanVien.Location = new System.Drawing.Point(3, 185);
+            this.dataGridViewNhanVien.Name = "dataGridViewNhanVien";
+            this.dataGridViewNhanVien.RowHeadersWidth = 51;
+            this.dataGridViewNhanVien.RowTemplate.Height = 24;
+            this.dataGridViewNhanVien.Size = new System.Drawing.Size(967, 252);
+            this.dataGridViewNhanVien.TabIndex = 1;
             // 
             // tblPnlDataEntry
             // 
@@ -307,15 +308,17 @@
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnCount = 5;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.Controls.Add(this.btnCapNhat, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnLamMoi, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnThem, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnLamMoi, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnXoa1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnThoat, 4, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 443);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -330,7 +333,7 @@
             this.btnCapNhat.BackColor = System.Drawing.SystemColors.Control;
             this.btnCapNhat.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhat.Location = new System.Drawing.Point(527, 8);
+            this.btnCapNhat.Location = new System.Drawing.Point(407, 8);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnCapNhat.Size = new System.Drawing.Size(150, 35);
@@ -345,7 +348,7 @@
             this.btnLamMoi.BackColor = System.Drawing.SystemColors.Control;
             this.btnLamMoi.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamMoi.Location = new System.Drawing.Point(770, 8);
+            this.btnLamMoi.Location = new System.Drawing.Point(600, 8);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnLamMoi.Size = new System.Drawing.Size(150, 35);
@@ -360,7 +363,7 @@
             this.btnThem.BackColor = System.Drawing.SystemColors.Control;
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(45, 8);
+            this.btnThem.Location = new System.Drawing.Point(214, 8);
             this.btnThem.Name = "btnThem";
             this.btnThem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnThem.Size = new System.Drawing.Size(150, 35);
@@ -375,7 +378,7 @@
             this.btnXoa1.BackColor = System.Drawing.SystemColors.Control;
             this.btnXoa1.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnXoa1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa1.Location = new System.Drawing.Point(286, 8);
+            this.btnXoa1.Location = new System.Drawing.Point(21, 8);
             this.btnXoa1.Name = "btnXoa1";
             this.btnXoa1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnXoa1.Size = new System.Drawing.Size(150, 35);
@@ -394,6 +397,22 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // btnThoat
+            // 
+            this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThoat.AutoSize = true;
+            this.btnThoat.BackColor = System.Drawing.SystemColors.Control;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Location = new System.Drawing.Point(794, 8);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnThoat.Size = new System.Drawing.Size(150, 35);
+            this.btnThoat.TabIndex = 7;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
             // FrmQLNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -405,7 +424,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lí Nhân Viên";
             this.tblPnlMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNhanVien)).EndInit();
             this.tblPnlDataEntry.ResumeLayout(false);
             this.tblPnlDataEntry.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -439,12 +458,13 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnXoa2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewNhanVien;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnXoa1;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnThoat;
     }
 }
