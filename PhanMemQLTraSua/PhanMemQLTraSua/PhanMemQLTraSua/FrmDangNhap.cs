@@ -40,5 +40,16 @@ namespace PhanMemQLTraSua
         {
 
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btndangnhap_Click(object sender, EventArgs e)
+        {
+            FrmGiaoDienChinh frm = new FrmGiaoDienChinh();
+            frm.ShowDialog(this);
+        }
     }
 }
