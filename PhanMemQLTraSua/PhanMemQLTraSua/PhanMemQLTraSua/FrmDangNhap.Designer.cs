@@ -50,9 +50,9 @@
             // 
             lblmatkhau.AutoSize = true;
             lblmatkhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            lblmatkhau.Location = new System.Drawing.Point(458, 152);
+            lblmatkhau.Location = new System.Drawing.Point(515, 190);
             lblmatkhau.Name = "lblmatkhau";
-            lblmatkhau.Size = new System.Drawing.Size(80, 20);
+            lblmatkhau.Size = new System.Drawing.Size(97, 25);
             lblmatkhau.TabIndex = 1;
             lblmatkhau.Text = "Mật Khẩu";
             lblmatkhau.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -65,37 +65,37 @@
             this.lbltaikhoang.Cursor = System.Windows.Forms.Cursors.No;
             this.lbltaikhoang.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lbltaikhoang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbltaikhoang.Location = new System.Drawing.Point(458, 87);
+            this.lbltaikhoang.Location = new System.Drawing.Point(515, 109);
             this.lbltaikhoang.Name = "lbltaikhoang";
-            this.lbltaikhoang.Size = new System.Drawing.Size(84, 20);
+            this.lbltaikhoang.Size = new System.Drawing.Size(103, 25);
             this.lbltaikhoang.TabIndex = 0;
             this.lbltaikhoang.Text = "Tài Khoản";
             this.lbltaikhoang.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtmatkhau
             // 
-            this.txtmatkhau.Location = new System.Drawing.Point(567, 150);
+            this.txtmatkhau.Location = new System.Drawing.Point(638, 188);
             this.txtmatkhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtmatkhau.Name = "txtmatkhau";
-            this.txtmatkhau.Size = new System.Drawing.Size(176, 22);
+            this.txtmatkhau.Size = new System.Drawing.Size(198, 26);
             this.txtmatkhau.TabIndex = 3;
             this.txtmatkhau.UseSystemPasswordChar = true;
             // 
             // txttaikhoang
             // 
-            this.txttaikhoang.Location = new System.Drawing.Point(567, 87);
+            this.txttaikhoang.Location = new System.Drawing.Point(638, 109);
             this.txttaikhoang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txttaikhoang.Name = "txttaikhoang";
-            this.txttaikhoang.Size = new System.Drawing.Size(176, 22);
+            this.txttaikhoang.Size = new System.Drawing.Size(198, 26);
             this.txttaikhoang.TabIndex = 2;
             // 
             // llbllienhe
             // 
             this.llbllienhe.AutoSize = true;
             this.llbllienhe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.llbllienhe.Location = new System.Drawing.Point(459, 321);
+            this.llbllienhe.Location = new System.Drawing.Point(516, 401);
             this.llbllienhe.Name = "llbllienhe";
-            this.llbllienhe.Size = new System.Drawing.Size(58, 18);
+            this.llbllienhe.Size = new System.Drawing.Size(72, 22);
             this.llbllienhe.TabIndex = 4;
             this.llbllienhe.TabStop = true;
             this.llbllienhe.Text = "Liên Hệ";
@@ -104,9 +104,9 @@
             // 
             this.llblhuongdan.AutoSize = true;
             this.llblhuongdan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.llblhuongdan.Location = new System.Drawing.Point(724, 321);
+            this.llblhuongdan.Location = new System.Drawing.Point(814, 401);
             this.llblhuongdan.Name = "llblhuongdan";
-            this.llblhuongdan.Size = new System.Drawing.Size(83, 18);
+            this.llblhuongdan.Size = new System.Drawing.Size(101, 22);
             this.llblhuongdan.TabIndex = 5;
             this.llblhuongdan.TabStop = true;
             this.llblhuongdan.Text = "Hướng Dẫn";
@@ -117,7 +117,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, -2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(414, 366);
+            this.pictureBox1.Size = new System.Drawing.Size(466, 458);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -133,10 +133,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::PhanMemQLTraSua.Properties.Resources.pngtree_milk_tea_shop_poster_background_material_image_150838;
-            this.pictureBox3.Location = new System.Drawing.Point(411, -2);
+            this.pictureBox3.Location = new System.Drawing.Point(462, -2);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(407, 366);
+            this.pictureBox3.Size = new System.Drawing.Size(458, 458);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
@@ -145,10 +145,10 @@
             // 
             this.btndangnhap.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btndangnhap.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btndangnhap.Location = new System.Drawing.Point(524, 227);
+            this.btndangnhap.Location = new System.Drawing.Point(590, 284);
             this.btndangnhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btndangnhap.Name = "btndangnhap";
-            this.btndangnhap.Size = new System.Drawing.Size(102, 38);
+            this.btndangnhap.Size = new System.Drawing.Size(115, 48);
             this.btndangnhap.TabIndex = 10;
             this.btndangnhap.Text = "Đăng Nhập";
             this.btndangnhap.UseVisualStyleBackColor = false;
@@ -157,9 +157,10 @@
             // 
             this.Cb_ShowPass.AutoSize = true;
             this.Cb_ShowPass.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cb_ShowPass.Location = new System.Drawing.Point(579, 190);
+            this.Cb_ShowPass.Location = new System.Drawing.Point(659, 237);
+            this.Cb_ShowPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Cb_ShowPass.Name = "Cb_ShowPass";
-            this.Cb_ShowPass.Size = new System.Drawing.Size(145, 21);
+            this.Cb_ShowPass.Size = new System.Drawing.Size(177, 24);
             this.Cb_ShowPass.TabIndex = 11;
             this.Cb_ShowPass.Text = "Hiển Thị Mật Khẩu";
             this.Cb_ShowPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -170,19 +171,19 @@
             // 
             this.btnThoat.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnThoat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnThoat.Location = new System.Drawing.Point(641, 227);
+            this.btnThoat.Location = new System.Drawing.Point(721, 284);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(102, 38);
+            this.btnThoat.Size = new System.Drawing.Size(115, 48);
             this.btnThoat.TabIndex = 12;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
             // 
             // FrmDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 360);
+            this.ClientSize = new System.Drawing.Size(921, 450);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.Cb_ShowPass);
             this.Controls.Add(this.btndangnhap);
@@ -194,6 +195,7 @@
             this.Controls.Add(lblmatkhau);
             this.Controls.Add(this.lbltaikhoang);
             this.Controls.Add(this.pictureBox3);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
