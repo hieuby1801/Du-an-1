@@ -19,7 +19,10 @@ namespace PhanMemQLTraSua
 
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
-
+            FrmHoaDon frmHD = new FrmHoaDon();
+            this.Hide();
+            frmHD.ShowDialog();
+            this.Show();
         }
 
         private void FrmGiaoDienChinh_Load(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhanMemQLTraSua.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,20 @@ namespace PhanMemQLTraSua
         public FrmHoaDon()
         {
             InitializeComponent();
+            LoadDSHD_HDCT();
         }
+
+        void LoadDSHD_HDCT()
+        {
+            DataProvider dataProvider = new DataProvider();
+
+            string queryHD = "select maHD as [Mã HĐ], thoiGianXuat as [Thời gian xuất HĐ], tongTien as [Tổng tiền], khachHang as [Khách hàng], maNV as [NV tạo HĐ] from HoaDon ";
+            
+            string queryHDCT = "select maHDCT as [Mã HĐCT], maSP as [Mã SP], maHD as [Mã HĐ], soLuong as [Số Lượng] from HoaDonChiTiet ";
+            dataGridView1.DataSource = dataProvider.ExcuteQuery(queryHDCT);
+            dataGridViewDSHD.DataSource = dataProvider.ExcuteQuery(queryHD);
+        }
+
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -40,6 +54,11 @@ namespace PhanMemQLTraSua
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
