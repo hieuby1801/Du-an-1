@@ -39,5 +39,13 @@ namespace PhanMemQLTraSua
             frmQLNhanVien.ShowDialog(); 
             this.Show();
         }
+
+        private void btnSanPham_Click(object sender, EventArgs e)
+        {
+            FrmQLSanPham frmSP = new FrmQLSanPham();
+            this.Hide();
+            frmSP.ShowDialog();
+            this.Show();
+        }
     }
 }

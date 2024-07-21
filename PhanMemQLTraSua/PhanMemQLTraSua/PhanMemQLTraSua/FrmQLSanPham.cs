@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhanMemQLTraSua.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace PhanMemQLTraSua
         public FrmQLSanPham()
         {
             InitializeComponent();
+            LoadDSSanPham();
+        }
+
+        void LoadDSSanPham()
+        {
+            string query = "select maSP as [Mã SP], tenSP as [Tên Sản Phẩm], donGia as [Giá Bán], maNhomSP as [Mã Nhóm SP] from SanPham";
+            DataProvider dataProvider = new DataProvider();
+            dataGridViewSP.DataSource = dataProvider.ExcuteQuery(query);
         }
     }
 }

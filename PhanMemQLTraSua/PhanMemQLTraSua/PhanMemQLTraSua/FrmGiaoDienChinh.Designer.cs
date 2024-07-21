@@ -115,6 +115,7 @@
             this.btnSanPham.TabIndex = 2;
             this.btnSanPham.Text = "Sản Phẩm";
             this.btnSanPham.UseVisualStyleBackColor = true;
+            this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
             // 
             // btnHoaDon
             // 
