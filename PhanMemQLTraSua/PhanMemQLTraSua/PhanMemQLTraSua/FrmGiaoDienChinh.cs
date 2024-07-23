@@ -50,5 +50,29 @@ namespace PhanMemQLTraSua
             frmSP.ShowDialog();
             this.Show();
         }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            FrmThongKe frmTK = new FrmThongKe();
+            this.Hide();
+            frmTK.ShowDialog();
+            this.Show();
+        }
+
+        private void btnLienHe_Click(object sender, EventArgs e)
+        {
+            FrmLienHe frmLH = new FrmLienHe();
+            this.Hide();
+            frmLH.ShowDialog();
+            this.Show();
+        }
+
+        private void btnHuongDan_Click(object sender, EventArgs e)
+        {
+            FrmHuongDan frmHD = new FrmHuongDan();
+            this.Hide();
+            frmHD.ShowDialog();
+            this.Show();
+        }
     }
 }

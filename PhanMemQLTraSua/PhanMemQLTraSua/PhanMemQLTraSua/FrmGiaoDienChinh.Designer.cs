@@ -37,9 +37,9 @@
             this.btnHoaDon = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnDangXuat = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblDisplayName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnDangXuat = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +76,7 @@
             this.btnHuongDan.TabIndex = 5;
             this.btnHuongDan.Text = "Hướng Dẫn";
             this.btnHuongDan.UseVisualStyleBackColor = true;
+            this.btnHuongDan.Click += new System.EventHandler(this.btnHuongDan_Click);
             // 
             // btnLienHe
             // 
@@ -89,6 +90,7 @@
             this.btnLienHe.TabIndex = 4;
             this.btnLienHe.Text = "Liên Hệ";
             this.btnLienHe.UseVisualStyleBackColor = true;
+            this.btnLienHe.Click += new System.EventHandler(this.btnLienHe_Click);
             // 
             // btnThongKe
             // 
@@ -102,6 +104,7 @@
             this.btnThongKe.TabIndex = 3;
             this.btnThongKe.Text = "Thống Kê";
             this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // btnSanPham
             // 
@@ -156,6 +159,25 @@
             this.panel1.Size = new System.Drawing.Size(938, 69);
             this.panel1.TabIndex = 1;
             // 
+            // lblDisplayName
+            // 
+            this.lblDisplayName.AutoSize = true;
+            this.lblDisplayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisplayName.Location = new System.Drawing.Point(62, 24);
+            this.lblDisplayName.Name = "lblDisplayName";
+            this.lblDisplayName.Size = new System.Drawing.Size(0, 20);
+            this.lblDisplayName.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Hi, ";
+            // 
             // btnDangXuat
             // 
             this.btnDangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -169,25 +191,6 @@
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hi, ";
-            // 
-            // lblDisplayName
-            // 
-            this.lblDisplayName.AutoSize = true;
-            this.lblDisplayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisplayName.Location = new System.Drawing.Point(62, 24);
-            this.lblDisplayName.Name = "lblDisplayName";
-            this.lblDisplayName.Size = new System.Drawing.Size(0, 20);
-            this.lblDisplayName.TabIndex = 2;
             // 
             // FrmGiaoDienChinh
             // 
