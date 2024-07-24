@@ -21,13 +21,11 @@ namespace PhanMemQLTraSua
 
         void LoadDSHD_HDCT()
         {
-            DataProvider dataProvider = new DataProvider();
-
             string queryHD = "select maHD as [Mã HĐ], thoiGianXuat as [Thời gian xuất HĐ], tongTien as [Tổng tiền], khachHang as [Khách hàng], maNV as [NV tạo HĐ] from HoaDon ";
-            
             string queryHDCT = "select maHDCT as [Mã HĐCT], maSP as [Mã SP], maHD as [Mã HĐ], soLuong as [Số Lượng] from HoaDonChiTiet ";
-            dataGridView1.DataSource = dataProvider.ExcuteQuery(queryHDCT);
-            dataGridViewDSHD.DataSource = dataProvider.ExcuteQuery(queryHD);
+
+            dataGridView1.DataSource = DataProvider.Instance.ExcuteQuery(queryHDCT);
+            dataGridViewDSHD.DataSource = DataProvider.Instance.ExcuteQuery(queryHD);
         }
 
 

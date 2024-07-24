@@ -22,8 +22,7 @@ namespace PhanMemQLTraSua
         void LoadDSSanPham()
         {
             string query = "select maSP as [Mã SP], tenSP as [Tên Sản Phẩm], donGia as [Giá Bán], maNhomSP as [Mã Nhóm SP] from SanPham";
-            DataProvider dataProvider = new DataProvider();
-            dataGridViewSP.DataSource = dataProvider.ExcuteQuery(query);
+            dataGridViewSP.DataSource = DataProvider.Instance.ExcuteQuery(query);
         }
     }
 }

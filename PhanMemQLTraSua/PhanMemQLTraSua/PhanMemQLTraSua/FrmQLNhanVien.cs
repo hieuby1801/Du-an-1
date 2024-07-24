@@ -32,8 +32,8 @@ namespace PhanMemQLTraSua
         void LoadDSNhanVien()
         {
             string query = "select ID as [ID], maNV as [Mã NV], sdt as [Số điện thoại], tenNV as [Tên nhân viên], tinhTrang as [Tình trạng], diaChi as [Địa chỉ], vaiTro as [Vai trò], matKhau as [Mật khẩu] from NhanVien";
-            DataProvider dataProvider = new DataProvider();
-            dataGridViewNhanVien.DataSource = dataProvider.ExcuteQuery(query);
+
+            dataGridViewNhanVien.DataSource = DataProvider.Instance.ExcuteQuery(query);
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
