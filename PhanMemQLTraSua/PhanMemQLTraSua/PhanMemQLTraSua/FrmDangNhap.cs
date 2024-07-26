@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhanMemQLTraSua.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,10 +49,31 @@ namespace PhanMemQLTraSua
 
         private void btndangnhap_Click(object sender, EventArgs e)
         {
-            FrmGiaoDienChinh frm = new FrmGiaoDienChinh();
-            this.Hide();
-            frm.ShowDialog();
-            this.Show();
+            string userName = txtTaiKhoan.Text;
+            string passWord = txtmatkhau.Text;
+            if ( Login(userName, passWord))
+            {
+                FrmGiaoDienChinh frm = new FrmGiaoDienChinh();
+                this.Hide();
+                frm.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác !");
+            }
+            
+        }
+
+        bool Login (string username, string passWord)
+        {
+            return AccountDAL.Instance.Login(username, passWord);
+        }
+
+       
+        private void txtmatkhau_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

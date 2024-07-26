@@ -31,7 +31,7 @@
             System.Windows.Forms.Label lblmatkhau;
             this.lbltaikhoang = new System.Windows.Forms.Label();
             this.txtmatkhau = new System.Windows.Forms.TextBox();
-            this.txttaikhoang = new System.Windows.Forms.TextBox();
+            this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.llbllienhe = new System.Windows.Forms.LinkLabel();
             this.llblhuongdan = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -80,14 +80,15 @@
             this.txtmatkhau.Size = new System.Drawing.Size(176, 22);
             this.txtmatkhau.TabIndex = 3;
             this.txtmatkhau.UseSystemPasswordChar = true;
+            this.txtmatkhau.TextChanged += new System.EventHandler(this.txtmatkhau_TextChanged);
             // 
-            // txttaikhoang
+            // txtTaiKhoan
             // 
-            this.txttaikhoang.Location = new System.Drawing.Point(567, 87);
-            this.txttaikhoang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txttaikhoang.Name = "txttaikhoang";
-            this.txttaikhoang.Size = new System.Drawing.Size(176, 22);
-            this.txttaikhoang.TabIndex = 2;
+            this.txtTaiKhoan.Location = new System.Drawing.Point(567, 87);
+            this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTaiKhoan.Name = "txtTaiKhoan";
+            this.txtTaiKhoan.Size = new System.Drawing.Size(176, 22);
+            this.txtTaiKhoan.TabIndex = 2;
             // 
             // llbllienhe
             // 
@@ -191,7 +192,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.llblhuongdan);
             this.Controls.Add(this.llbllienhe);
-            this.Controls.Add(this.txttaikhoang);
+            this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.txtmatkhau);
             this.Controls.Add(lblmatkhau);
             this.Controls.Add(this.lbltaikhoang);
@@ -211,7 +212,7 @@
 
         private System.Windows.Forms.Label lbltaikhoang;
         private System.Windows.Forms.TextBox txtmatkhau;
-        private System.Windows.Forms.TextBox txttaikhoang;
+        private System.Windows.Forms.TextBox txtTaiKhoan;
         private System.Windows.Forms.LinkLabel llbllienhe;
         private System.Windows.Forms.LinkLabel llblhuongdan;
         private System.Windows.Forms.PictureBox pictureBox1;
