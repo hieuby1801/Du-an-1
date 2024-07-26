@@ -17,12 +17,19 @@ namespace PhanMemQLTraSua
         {
             InitializeComponent();
             LoadDSSanPham();
+            txtMaSP.ReadOnly = true;
+            txtTenSP.ReadOnly = true;
+            txtSLTonKho.ReadOnly = true;
+            txtDonGia.ReadOnly = true;
+            txtMaNhomSP.ReadOnly = true;
+            dataGridViewSP.Enabled = false;
+            btnLuu.Enabled = false;
+            btnXoa2.Enabled = false;
         }
 
         void LoadDSSanPham()
         {
-            string query = "select maSP as [Mã SP], tenSP as [Tên Sản Phẩm], donGia as [Giá Bán], maNhomSP as [Mã Nhóm SP] from SanPham";
-            dataGridViewSP.DataSource = DataProvider.Instance.ExcuteQuery(query);
+            dataGridViewSP.DataSource = SanPhamDAL.Instance.DSSanPham();
         }
     }
 }

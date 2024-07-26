@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="DAL\AccountDAL.cs" />
     <Compile Include="DAL\DataProvider.cs" />
+    <Compile Include="DAL\NhanVienDAL.cs" />
+    <Compile Include="DAL\SanPhamDAL.cs" />
     <Compile Include="FrmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
