@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Collections;
 
 namespace PhanMemQLTraSua.DAL
 {
@@ -21,6 +23,31 @@ namespace PhanMemQLTraSua.DAL
 
         public bool Login (string username, string password)
         {
+            try
+            {
+                SqlConnection connection = new SqlConnection(DataProvider.Instance.conectionStr);
+                connection.Open();
+
+                SqlCommand command = new SqlCommand();
+                command.Connection = connection;
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.CommandText = "spDangNhap";
+                command.Parameters.AddWithValue("maNV", username);
+                command.Parameters.AddWithValue("matKhau", password);
+
+                if (Convert.ToInt16(command.ExecuteScalar()) > 0)
+                {
+                    return true;
+                }
+
+                connection.Close();                           
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally { }
             return false;
         }  
 

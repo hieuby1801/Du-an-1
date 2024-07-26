@@ -52,17 +52,23 @@ namespace PhanMemQLTraSua
             string userName = txtTaiKhoan.Text;
             string passWord = txtmatkhau.Text;
             if ( Login(userName, passWord))
-            {
+            {                
+                MessageBox.Show("Đăng nhập thành công");
                 FrmGiaoDienChinh frm = new FrmGiaoDienChinh();
                 this.Hide();
                 frm.ShowDialog();
                 this.Show();
+                txtTaiKhoan.Text = null;
+                txtmatkhau.Text = null;
             }
             else
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác !");
-            }
-            
+                MessageBox.Show("Email hoặc mật khẩu không đúng !");
+                txtTaiKhoan.Text = null;
+                txtmatkhau.Text = null;
+                txtTaiKhoan.Focus();
+            }            
         }
 
         bool Login (string username, string passWord)

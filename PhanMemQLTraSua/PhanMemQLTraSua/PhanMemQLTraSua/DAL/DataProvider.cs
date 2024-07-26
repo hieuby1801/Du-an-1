@@ -18,7 +18,7 @@ namespace PhanMemQLTraSua.DAL
             private set { DataProvider.instance = value; }  
         }
 
-        private string conectionStr = "Data Source=.;Initial Catalog=qltrasua;Integrated Security=True";
+        internal string conectionStr = "Data Source=.;Initial Catalog=qltrasua;Integrated Security=True";
         public DataTable ExcuteQuery(string query)
         {
             DataTable dataTable = new DataTable();
@@ -38,5 +38,6 @@ namespace PhanMemQLTraSua.DAL
 
             return dataTable;
         }
+
     }
 }
