@@ -119,6 +119,7 @@
             this.btnThoat.TabIndex = 7;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnCapNhat
             // 
@@ -135,6 +136,7 @@
             this.btnCapNhat.TabIndex = 6;
             this.btnCapNhat.Text = "Cập Nhật";
             this.btnCapNhat.UseVisualStyleBackColor = false;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // btnLamMoi
             // 
@@ -151,6 +153,7 @@
             this.btnLamMoi.TabIndex = 5;
             this.btnLamMoi.Text = "Làm Mới";
             this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnThem
             // 
@@ -167,6 +170,7 @@
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa1
             // 
@@ -183,6 +187,7 @@
             this.btnXoa1.TabIndex = 3;
             this.btnXoa1.Text = "Xoá";
             this.btnXoa1.UseVisualStyleBackColor = false;
+            this.btnXoa1.Click += new System.EventHandler(this.btnXoa1_Click);
             // 
             // tblPnlDataEntry
             // 
@@ -321,6 +326,7 @@
             this.btnLuu.TabIndex = 2;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa2
             // 
@@ -368,6 +374,7 @@
             this.dataGridViewSP.RowTemplate.Height = 24;
             this.dataGridViewSP.Size = new System.Drawing.Size(1020, 200);
             this.dataGridViewSP.TabIndex = 1;
+            this.dataGridViewSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSP_CellClick);
             // 
             // pictureBox1
             // 

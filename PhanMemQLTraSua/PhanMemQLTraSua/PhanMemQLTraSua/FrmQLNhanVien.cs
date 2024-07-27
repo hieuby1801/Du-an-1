@@ -88,6 +88,10 @@ namespace PhanMemQLTraSua
             NhanVienDAL.Instance.SuaNhanVien(maNV, sdt, tenNV, tinhTrang, diaChi, vaiTro, matKhau);
         }
 
+        void XoaNhanVien(string maNv)
+        {
+            NhanVienDAL.Instance.XoaNhanVien(maNv);
+        }
         void LamMoi()
         {
             txtMaNV.Text = "";
@@ -181,6 +185,15 @@ namespace PhanMemQLTraSua
             btnCapNhat.Enabled = false;
             btnThem.Enabled = false;
             btnXoa2.Enabled = true;
+            dataGridViewNhanVien.Enabled=true;
+            
+        }
+
+        private void btnXoa2_Click(object sender, EventArgs e)
+        {
+            XoaNhanVien(txtMaNV.Text);
+            LoadDSNhanVien();
+
         }
     }
 }

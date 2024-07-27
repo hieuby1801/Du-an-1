@@ -67,5 +67,25 @@ namespace PhanMemQLTraSua.DAL
             }
             finally { }
         }
+
+        public void XoaNhanVien(string maNV)
+        {
+            string query = string.Format("delete from NhanVien where maNV = '{0}'", maNV);
+            try
+            {
+                SqlConnection connection = new SqlConnection(DataProvider.Instance.conectionStr);
+                connection.Open();
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally { }
+        }
     }
 }
