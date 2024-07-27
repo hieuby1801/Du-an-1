@@ -342,6 +342,7 @@
             this.btnXoa2.TabIndex = 1;
             this.btnXoa2.Text = "Xoá";
             this.btnXoa2.UseVisualStyleBackColor = false;
+            this.btnXoa2.Click += new System.EventHandler(this.btnXoa2_Click);
             // 
             // txtSLTonKho
             // 

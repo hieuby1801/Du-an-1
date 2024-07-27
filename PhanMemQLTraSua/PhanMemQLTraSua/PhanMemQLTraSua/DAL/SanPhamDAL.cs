@@ -65,5 +65,24 @@ namespace PhanMemQLTraSua.DAL
             }
             finally { }
         }
+        public void XoaSanPham(int maSP)
+        {
+            string query = string.Format("delete from SanPham where maSP = {0}", maSP);
+            try
+            {
+                SqlConnection connection = new SqlConnection(DataProvider.Instance.conectionStr);
+                connection.Open();
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally { }
+        }
     }
 }

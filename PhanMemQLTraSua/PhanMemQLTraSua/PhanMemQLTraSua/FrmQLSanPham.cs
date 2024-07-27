@@ -148,5 +148,17 @@ namespace PhanMemQLTraSua
                 txtMaNhomSP.Text = row.Cells[4].Value.ToString();
             }
         }
+
+        private void btnXoa2_Click(object sender, EventArgs e)
+        {
+            int maSP = Convert.ToInt32(txtMaSP.Text);
+            XoaSanPham(maSP);
+            LoadDSSanPham();
+        }
+
+        void XoaSanPham(int maSP)
+        {
+            SanPhamDAL.Instance.XoaSanPham(maSP);
+        }
     }
 }
