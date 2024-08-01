@@ -13,6 +13,8 @@ namespace PhanMemQLTraSua
 {
     public partial class FrmDangNhap : Form
     {
+        internal static string maNV;
+        internal static int vaiTro;
         public FrmDangNhap()
         {
             InitializeComponent();
@@ -52,7 +54,12 @@ namespace PhanMemQLTraSua
             string userName = txtTaiKhoan.Text;
             string passWord = txtmatkhau.Text;
             if ( Login(userName, passWord))
-            {                
+            {               
+                // phan quyen
+                maNV = userName;
+                vaiTro = AccountDAL.Instance.getVaiTro(userName);
+
+                // xu li form
                 MessageBox.Show("Đăng nhập thành công");
                 FrmGiaoDienChinh frm = new FrmGiaoDienChinh();
                 this.Hide();

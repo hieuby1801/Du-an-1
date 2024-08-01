@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhanMemQLTraSua.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -83,6 +84,23 @@ namespace PhanMemQLTraSua.DAL
 
             }
             finally { }
+        }
+
+        public List<SanPham> DSSanPhamByNhom(int maNhomSP)
+        {
+            List<SanPham> list = new List<SanPham>();
+
+            string query = "select * from SanPham where maNhomSP = " + maNhomSP;
+
+            DataTable table = DataProvider.Instance.ExcuteQuery(query);
+
+            foreach (DataRow item in table.Rows)
+            {
+                SanPham sp = new SanPham(item);
+                list.Add(sp);
+            }
+
+            return list;
         }
     }
 }

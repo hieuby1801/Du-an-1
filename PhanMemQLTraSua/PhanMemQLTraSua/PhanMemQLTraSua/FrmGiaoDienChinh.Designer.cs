@@ -38,7 +38,7 @@
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDisplayName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblHi = new System.Windows.Forms.Label();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -152,7 +152,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.panel1.Controls.Add(this.lblDisplayName);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblHi);
             this.panel1.Controls.Add(this.btnDangXuat);
             this.panel1.Location = new System.Drawing.Point(0, -2);
             this.panel1.Name = "panel1";
@@ -168,15 +168,15 @@
             this.lblDisplayName.Size = new System.Drawing.Size(0, 20);
             this.lblDisplayName.TabIndex = 2;
             // 
-            // label1
+            // lblHi
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hi, ";
+            this.lblHi.AutoSize = true;
+            this.lblHi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHi.Location = new System.Drawing.Point(21, 24);
+            this.lblHi.Name = "lblHi";
+            this.lblHi.Size = new System.Drawing.Size(35, 20);
+            this.lblHi.TabIndex = 1;
+            this.lblHi.Text = "Hi, ";
             // 
             // btnDangXuat
             // 
@@ -221,7 +221,7 @@
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnDangXuat;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblHi;
         private System.Windows.Forms.Label lblDisplayName;
     }
 }

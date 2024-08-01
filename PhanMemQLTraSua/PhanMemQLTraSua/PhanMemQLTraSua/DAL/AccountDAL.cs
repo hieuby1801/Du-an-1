@@ -51,5 +51,17 @@ namespace PhanMemQLTraSua.DAL
             return false;
         }  
 
+        public int getVaiTro (string maNV)
+        {
+            string query = "select vaiTro from NhanVien where maNV = '" + maNV + "'";
+            int vaiTro;
+            SqlConnection con = new SqlConnection(DataProvider.Instance.conectionStr);
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            vaiTro = Convert.ToInt16(cmd.ExecuteScalar());
+            con.Close();
+            return vaiTro;
+        }
+
     }
 }

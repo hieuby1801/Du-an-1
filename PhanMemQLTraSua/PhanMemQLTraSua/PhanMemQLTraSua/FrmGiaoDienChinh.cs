@@ -27,7 +27,13 @@ namespace PhanMemQLTraSua
 
         private void FrmGiaoDienChinh_Load(object sender, EventArgs e)
         {
-
+            lblHi.Text += FrmDangNhap.maNV;
+            if (FrmDangNhap.vaiTro == 0)
+            {
+                btnNhanVien.Enabled = false;
+                btnSanPham.Enabled = false;
+                btnThongKe.Enabled = false; 
+            }
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
