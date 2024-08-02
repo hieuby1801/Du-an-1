@@ -15,6 +15,7 @@ namespace PhanMemQLTraSua
     public partial class FrmHoaDon : Form
     {
         bool isUpdate = true;
+        int maSP, maHD;
         public FrmHoaDon()
         {
             InitializeComponent();
@@ -67,8 +68,8 @@ namespace PhanMemQLTraSua
 
             DataGridViewRow row = dataGridViewDSHD.Rows[e.RowIndex];
 
-            string maHD = row.Cells[0].Value.ToString();
-            LoadHDCT(maHD);
+            maHD = Convert.ToInt16(row.Cells[0].Value);
+            LoadHDCT(maHD.ToString());
         }
 
         void LoadHDCT(string maHD)
@@ -146,7 +147,7 @@ namespace PhanMemQLTraSua
         {
             DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
-            int maSP = Convert.ToInt16(row.Cells[1].Value);
+            maSP = Convert.ToInt16(row.Cells[1].Value);
             int maNhomSP = SanPhamDAL.Instance.getMaNhomSP(maSP);
             dudSoLuong.Enabled = true;
             dudSoLuong.SelectedIndex = Convert.ToInt16(row.Cells[3].Value);
@@ -157,10 +158,48 @@ namespace PhanMemQLTraSua
 
         private void btnLuuSP_Click(object sender, EventArgs e)
         {
+            int soLuong = Convert.ToInt16(dudSoLuong.Text);
             if(isUpdate)
             {
-
+                HoaDonChiTietDAL.Instance.updateHDCT(soLuong, maHD, maSP);
+                MessageBox.Show("Cap nhat du lieu thanh cong");
+                LoadHDCT(maHD.ToString());
             }
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void dataGridViewDSHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            bool isOpen = true;
+            btnXoaHD.Enabled = isOpen;
+            tableLayoutPanel2.Enabled = isOpen;
+            dataGridView1.DataSource = null;
         }
     }
 }
