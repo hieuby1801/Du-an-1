@@ -39,5 +39,38 @@ namespace PhanMemQLTraSua.DAL
             return dataTable;
         }
 
+        public object ExcuteScalar(string query)
+        {
+            object result = 0;
+
+            using (SqlConnection connection = new SqlConnection(conectionStr))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                result = command.ExecuteScalar();
+
+                connection.Close();
+            }
+            return result;
+        }
+
+        public int ExcuteNonQuery(string query)
+        {
+            int result = 0;
+
+            using (SqlConnection connection = new SqlConnection(conectionStr))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                result = command.ExecuteNonQuery();
+
+                connection.Close();
+            }
+            return result;
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace PhanMemQLTraSua
 {
     public partial class FrmHoaDon : Form
     {
+        bool isUpdate = true;
         public FrmHoaDon()
         {
             InitializeComponent();
@@ -35,38 +36,9 @@ namespace PhanMemQLTraSua
             tableLayoutPanel2.Enabled = false;
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnResetHD_Click(object sender, EventArgs e)
@@ -80,19 +52,18 @@ namespace PhanMemQLTraSua
             LoadDSHD();
         }
 
-        private void dataGridViewDSHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            bool isOpen = true;
-            btnXoaHD.Enabled =  isOpen;
-            tableLayoutPanel2.Enabled = isOpen;
-            dataGridView1.DataSource = null;
-        }
-
         private void dataGridViewDSHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            bool isOpen = true;
-            btnXoaHD.Enabled = isOpen;
-            tableLayoutPanel2.Enabled = isOpen;
+            btnXoaHD.Enabled = true;
+            btnThemSP.Enabled = true;
+            btnSuaSP.Enabled = true; 
+            tableLayoutPanel2.Enabled = true;
+            dataGridView1.Enabled = false;
+            cboNhomSP.Enabled = false;
+            cboSP.Enabled = false;
+            dudSoLuong.Enabled = false;
+            btnLuuSP.Enabled = false;
+            btnResetFrmSP.Enabled = false;
 
             DataGridViewRow row = dataGridViewDSHD.Rows[e.RowIndex];
 
@@ -105,37 +76,91 @@ namespace PhanMemQLTraSua
             dataGridView1.DataSource = HoaDonDAL.Instance.LoadHDCT(maHD);
         }
 
-        private void FrmHoaDon_Load(object sender, EventArgs e)
-        {
-
-        }
-
         void LoadDS_NhomSP()
         {
             List<NhomSP> list = NhomSPDAL.Instance.DSNhomSP();
-
-            List<string> nhomSP = new List<string>();
-            
-            foreach (var item in list)
-            {
-                nhomSP.Add(item.TenNhomSP);
-            }
-            
-            cboNhomSP.DataSource = nhomSP;
+            cboNhomSP.DataSource = list;
+            cboNhomSP.DisplayMember = "tenNhomSP";
         }
         void DSSanPhamByNhom(int maNhomSP)
         {
             List<SanPham> list = SanPhamDAL.Instance.DSSanPhamByNhom(maNhomSP);
-
-            List<string> SP = new List<string>();
-
-            foreach (var item in list)
-            {
-                SP.Add(item.TenSP);
-            }
-
-            cboSP.DataSource = SP;    
+            cboSP.DataSource = list;
+            cboSP.DisplayMember = "tenSP";
         }
 
+        private void cboNhomSP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int id = 0;
+            ComboBox cb = sender as ComboBox;
+            if (cb.SelectedItem == null)
+                return;
+
+            NhomSP selected = cb.SelectedItem as NhomSP;
+            id = selected.MaNhomSP;
+
+            DSSanPhamByNhom(id);
+        }
+
+        private void btnThemSP_Click(object sender, EventArgs e)
+        {
+            isUpdate = false;
+            cboSP.Enabled = true;
+            cboNhomSP.Enabled = true;
+            dudSoLuong.Enabled = true;  
+            btnLuuSP.Enabled = true;
+            btnResetFrmSP.Enabled = true;
+            btnSuaSP.Enabled = false;
+            btnThemSP.Enabled = false;
+        }
+
+        private void btnResetFrmSP_Click(object sender, EventArgs e)
+        {
+            btnXoaHD.Enabled = true;
+            btnThemSP.Enabled = true;
+            btnSuaSP.Enabled = true;
+            tableLayoutPanel2.Enabled = true;
+            dataGridView1.Enabled = false;
+            cboNhomSP.Enabled = false;
+            cboSP.Enabled = false;
+            dudSoLuong.Enabled = false;
+            btnLuuSP.Enabled = false;
+            btnResetFrmSP.Enabled = false;
+        }
+
+        private void btnSuaSP_Click(object sender, EventArgs e)
+        {
+            isUpdate = true;
+            MessageBox.Show("Vui lòng chọn Sản phẩm muốn chỉnh sửa !");
+            cboSP.Enabled = false;
+            cboNhomSP.Enabled = false;
+            dudSoLuong.Enabled = false;
+            btnLuuSP.Enabled = false;
+            btnResetFrmSP.Enabled = true;
+            btnSuaSP.Enabled = false;
+            btnThemSP.Enabled = false;
+            dataGridView1.Enabled = true;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+
+            int maSP = Convert.ToInt16(row.Cells[1].Value);
+            int maNhomSP = SanPhamDAL.Instance.getMaNhomSP(maSP);
+            dudSoLuong.Enabled = true;
+            dudSoLuong.SelectedIndex = Convert.ToInt16(row.Cells[3].Value);
+            btnLuuSP.Enabled=true;
+            cboNhomSP.Text = NhomSPDAL.Instance.getTenNhomSP(maNhomSP);
+            cboSP.Text = SanPhamDAL.Instance.getTenSP(maSP);
+        }
+
+        private void btnLuuSP_Click(object sender, EventArgs e)
+        {
+            if(isUpdate)
+            {
+
+            }
+        }
     }
 }

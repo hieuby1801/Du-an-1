@@ -33,5 +33,12 @@ namespace PhanMemQLTraSua.DAL
 
             return list;
         }
+
+        public string getTenNhomSP(int maNhomSP)
+        {
+            string query = "select tenNhomSP from NhomSP where maNhomSP = " + maNhomSP;
+            string result = Convert.ToString(DataProvider.Instance.ExcuteScalar(query));
+            return result;
+        }
     }
 }

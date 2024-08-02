@@ -34,8 +34,16 @@ namespace PhanMemQLTraSua.DTO
         {
             this.MaSP = (int)row["maSP"];
             this.TenSP = row["tenSP"].ToString();
-            this.SlTonKho = (int)row["slTonKho"];
-            this.DonGia = (int)row["donGia"];
+            
+            try
+            {
+                this.SlTonKho = (int)row["slTonKho"];
+            }
+            catch
+            {
+                this.SlTonKho = 0;
+            }
+
             this.MaNhomSP = (int)row["maNhomSP"];
         }
     }

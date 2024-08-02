@@ -102,5 +102,19 @@ namespace PhanMemQLTraSua.DAL
 
             return list;
         }
+
+        public int getMaNhomSP(int maSP)
+        {
+            string query = "select maNhomSP from SanPham where maSP = " + maSP;
+            int result = Convert.ToInt16(DataProvider.Instance.ExcuteScalar(query));
+            return result;  
+        }
+
+        public string getTenSP(int maSP)
+        {
+            string query = "select tenSP from SanPham where maSP = " + maSP;
+            string result = Convert.ToString(DataProvider.Instance.ExcuteScalar(query));
+            return result;
+        }
     }
 }
