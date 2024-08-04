@@ -53,6 +53,7 @@
     <Compile Include="DAL\NhanVienDAL.cs" />
     <Compile Include="DAL\NhomSPDAL.cs" />
     <Compile Include="DAL\SanPhamDAL.cs" />
+    <Compile Include="DTO\HDCT.cs" />
     <Compile Include="DTO\NhomSP.cs" />
     <Compile Include="DTO\SanPham.cs" />
     <Compile Include="FrmDangNhap.cs">

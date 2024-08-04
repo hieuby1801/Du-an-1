@@ -41,18 +41,16 @@ namespace PhanMemQLTraSua.DAL
 
         public object ExcuteScalar(string query)
         {
-            object result = 0;
+            object result;
 
-            using (SqlConnection connection = new SqlConnection(conectionStr))
-            {
-                connection.Open();
+            SqlConnection connection = new SqlConnection(conectionStr);
+            connection.Open();
 
-                SqlCommand command = new SqlCommand(query, connection);
+            SqlCommand command = new SqlCommand(query, connection);
 
-                result = command.ExecuteScalar();
+            result = command.ExecuteScalar();
 
-                connection.Close();
-            }
+            connection.Close();
             return result;
         }
 
@@ -71,6 +69,36 @@ namespace PhanMemQLTraSua.DAL
                 connection.Close();
             }
             return result;
+        }
+
+        public bool Login(string username, string password)
+        {
+            try
+            {
+                SqlConnection connection = new SqlConnection(DataProvider.Instance.conectionStr);
+                connection.Open();
+
+                SqlCommand command = new SqlCommand();
+                command.Connection = connection;
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.CommandText = "spDangNhap";
+                command.Parameters.AddWithValue("maNV", username);
+                command.Parameters.AddWithValue("matKhau", password);
+
+                if (Convert.ToInt16(command.ExecuteScalar()) > 0)
+                {
+                    return true;
+                }
+
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally { }
+            return false;
         }
     }
 }

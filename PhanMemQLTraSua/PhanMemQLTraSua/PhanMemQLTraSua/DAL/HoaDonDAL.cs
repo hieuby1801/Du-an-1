@@ -64,5 +64,19 @@ namespace PhanMemQLTraSua.DAL
             connection.Close();
             return dt;
         }
+
+        public int tongTien (int maHD)
+        {
+            string query = "exec spTongTien " + maHD.ToString();
+            return Convert.ToInt32(DataProvider.Instance.ExcuteScalar(query));
+        }
+
+        public bool updateTongTien(int maHD)
+        {
+            string query = string.Format("update HoaDon set tongTien = {0} where maHD = {1}", tongTien(maHD), maHD);
+            int resultUpdate = Convert.ToInt16(DataProvider.Instance.ExcuteNonQuery(query));
+            if (resultUpdate > 0) return true;
+            return false;
+        }
     }
 }

@@ -14,8 +14,9 @@ namespace PhanMemQLTraSua
 {
     public partial class FrmHoaDon : Form
     {
-        bool isUpdate = true;
-        int maSP, maHD;
+        static bool isUpdate = true;
+        static int maSP, maHD;
+        static List<SanPham> listSP;
         public FrmHoaDon()
         {
             InitializeComponent();
@@ -85,8 +86,8 @@ namespace PhanMemQLTraSua
         }
         void DSSanPhamByNhom(int maNhomSP)
         {
-            List<SanPham> list = SanPhamDAL.Instance.DSSanPhamByNhom(maNhomSP);
-            cboSP.DataSource = list;
+            listSP = SanPhamDAL.Instance.DSSanPhamByNhom(maNhomSP);
+            cboSP.DataSource = listSP;
             cboSP.DisplayMember = "tenSP";
         }
 
@@ -161,10 +162,50 @@ namespace PhanMemQLTraSua
             int soLuong = Convert.ToInt16(dudSoLuong.Text);
             if(isUpdate)
             {
-                HoaDonChiTietDAL.Instance.updateHDCT(soLuong, maHD, maSP);
-                MessageBox.Show("Cap nhat du lieu thanh cong");
+                int rowUpdated = HoaDonChiTietDAL.Instance.updateHDCT(maHD, maSP, soLuong);
+                if (rowUpdated > 0)
+                    MessageBox.Show("Cập nhật dữ liệu thành công");
+                else
+                    MessageBox.Show("Lỗi ! Cập nhật dữ liệu không thành công");
+
                 LoadHDCT(maHD.ToString());
             }
+            else
+            {
+                //HDCT hDCT = new HDCT();
+                //hDCT.MaHD = maHD;
+                //hDCT.MaSP = maSP;
+                //hDCT.SoLuong = soLuong;
+                //
+                if (HoaDonChiTietDAL.Instance.checkHDCT(maHD, maSP))
+                {
+                    int tongSL = soLuong + HoaDonChiTietDAL.Instance.getSLSP(maHD, maSP); 
+                    int rowUpdated = HoaDonChiTietDAL.Instance.updateHDCT(maHD, maSP, tongSL);
+                    if (rowUpdated > 0)
+                        MessageBox.Show("Cập nhật dữ liệu thành công");
+                    else
+                        MessageBox.Show("Lỗi ! Cập nhật dữ liệu không thành công");
+
+                    LoadHDCT(maHD.ToString());
+                }
+                else
+                {
+                    int rowInsert = HoaDonChiTietDAL.Instance.insertHDCT(maHD, maSP, soLuong);
+                    if (rowInsert > 0)
+                        MessageBox.Show("Cập nhật dữ liệu thành công");
+                    else
+                        MessageBox.Show("Lỗi ! Cập nhật dữ liệu không thành công");
+
+                    LoadHDCT(maHD.ToString());
+                }
+            }
+            if (HoaDonDAL.Instance.updateTongTien(maHD))
+                MessageBox.Show("Cập nhật tổng tiền thành công");
+            else
+                MessageBox.Show("Lỗi ! Cập nhật tổng tiền không thành công");
+            int indexHD = dataGridViewDSHD.SelectedRows[0].Index;
+            LoadDSHD();
+            dataGridViewDSHD.Rows[indexHD].Selected = true;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -194,6 +235,13 @@ namespace PhanMemQLTraSua
         {
 
         }
+
+        private void cboSP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = cboSP.SelectedIndex;
+            maSP = listSP.ElementAt(index).MaSP;
+        }
+
         private void dataGridViewDSHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             bool isOpen = true;
