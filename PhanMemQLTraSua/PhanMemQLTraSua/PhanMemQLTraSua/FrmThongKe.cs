@@ -17,14 +17,10 @@ namespace PhanMemQLTraSua
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void FrmThongKe_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
+            Mtb1.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            Mtb2.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
     }
 }
