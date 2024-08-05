@@ -242,6 +242,11 @@ namespace PhanMemQLTraSua
             maSP = listSP.ElementAt(index).MaSP;
         }
 
+        private void btnXuatHD_Click(object sender, EventArgs e)
+        {
+            HoaDonChiTietDAL.Instance.xuatHD(maHD);
+        }
+
         private void dataGridViewDSHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             bool isOpen = true;

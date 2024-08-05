@@ -111,7 +111,15 @@ namespace PhanMemQLTraSua
         {
             string tenSP = txtTenSP.Text;
             int donGia = Convert.ToInt16(txtDonGia.Text);
-            int slTonKho = Convert.ToInt16(txtSLTonKho.Text);
+            int slTonKho;
+            try
+            {
+                slTonKho = Convert.ToInt16(txtSLTonKho.Text);
+            }
+            catch
+            {
+                slTonKho = 0;
+            }
             int maNhomSP = Convert.ToInt16(txtMaNhomSP.Text);
             if (them)
                 ThemSanPham(tenSP, slTonKho, donGia, maNhomSP);

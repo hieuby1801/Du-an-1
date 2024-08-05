@@ -451,6 +451,7 @@
             this.btnXuatHD.TabIndex = 2;
             this.btnXuatHD.Text = "Xuất HĐ";
             this.btnXuatHD.UseVisualStyleBackColor = true;
+            this.btnXuatHD.Click += new System.EventHandler(this.btnXuatHD_Click);
             // 
             // FrmHoaDon
             // 
