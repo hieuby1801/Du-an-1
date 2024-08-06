@@ -45,6 +45,8 @@ namespace PhanMemQLTraSua
         {
             dataGridViewNhanVien.DataSource = NhanVienDAL.Instance.DSNhanVien();
         }
+        //Tải danh sách nhân viên từ cơ sở dữ liệu và thiết lập nguồn dữ liệu cho DataGridView
+        //(dataGridViewNhanVien) để hiển thị danh sách nhân viên.
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
