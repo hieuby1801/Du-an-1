@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhanMemQLTraSua.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,23 @@ namespace PhanMemQLTraSua
         {
             Mtb1.Text = DateTime.Now.ToString("dd/MM/yyyy");
             Mtb2.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            
+        }
+
+        private void DataGR_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btThongKe_Click(object sender, EventArgs e)
+        {
+            
+            DataGR.DataSource = HoaDonDAL.Instance.DSHoaDon();
+        }
+
+        private void btEX_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

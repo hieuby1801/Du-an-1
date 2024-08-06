@@ -35,6 +35,7 @@
             this.Mtb1 = new System.Windows.Forms.MaskedTextBox();
             this.Mtb2 = new System.Windows.Forms.MaskedTextBox();
             this.btThongKe = new System.Windows.Forms.Button();
+            this.btEX = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGR)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +48,7 @@
             this.DataGR.RowTemplate.Height = 24;
             this.DataGR.Size = new System.Drawing.Size(945, 357);
             this.DataGR.TabIndex = 0;
+            this.DataGR.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGR_CellContentClick);
             // 
             // label1
             // 
@@ -61,7 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(264, 59);
+            this.label2.Location = new System.Drawing.Point(200, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 16);
             this.label2.TabIndex = 2;
@@ -70,7 +72,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(516, 62);
+            this.label3.Location = new System.Drawing.Point(452, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 3;
@@ -78,7 +80,7 @@
             // 
             // Mtb1
             // 
-            this.Mtb1.Location = new System.Drawing.Point(358, 56);
+            this.Mtb1.Location = new System.Drawing.Point(294, 62);
             this.Mtb1.Mask = "00/00/0000";
             this.Mtb1.Name = "Mtb1";
             this.Mtb1.Size = new System.Drawing.Size(100, 22);
@@ -87,7 +89,7 @@
             // 
             // Mtb2
             // 
-            this.Mtb2.Location = new System.Drawing.Point(617, 59);
+            this.Mtb2.Location = new System.Drawing.Point(553, 65);
             this.Mtb2.Mask = "00/00/0000";
             this.Mtb2.Name = "Mtb2";
             this.Mtb2.Size = new System.Drawing.Size(100, 22);
@@ -98,12 +100,25 @@
             // 
             this.btThongKe.BackColor = System.Drawing.SystemColors.Highlight;
             this.btThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThongKe.Location = new System.Drawing.Point(775, 52);
+            this.btThongKe.Location = new System.Drawing.Point(710, 61);
             this.btThongKe.Name = "btThongKe";
-            this.btThongKe.Size = new System.Drawing.Size(100, 29);
+            this.btThongKe.Size = new System.Drawing.Size(114, 29);
             this.btThongKe.TabIndex = 6;
             this.btThongKe.Text = "Thống Kê";
             this.btThongKe.UseVisualStyleBackColor = false;
+            this.btThongKe.Click += new System.EventHandler(this.btThongKe_Click);
+            // 
+            // btEX
+            // 
+            this.btEX.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btEX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEX.Location = new System.Drawing.Point(843, 62);
+            this.btEX.Name = "btEX";
+            this.btEX.Size = new System.Drawing.Size(114, 29);
+            this.btEX.TabIndex = 7;
+            this.btEX.Text = "Thoát";
+            this.btEX.UseVisualStyleBackColor = false;
+            this.btEX.Click += new System.EventHandler(this.btEX_Click);
             // 
             // FrmThongKe
             // 
@@ -111,6 +126,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(969, 487);
+            this.Controls.Add(this.btEX);
             this.Controls.Add(this.btThongKe);
             this.Controls.Add(this.Mtb2);
             this.Controls.Add(this.Mtb1);
@@ -137,5 +153,6 @@
         private System.Windows.Forms.MaskedTextBox Mtb1;
         private System.Windows.Forms.MaskedTextBox Mtb2;
         private System.Windows.Forms.Button btThongKe;
+        private System.Windows.Forms.Button btEX;
     }
 }
