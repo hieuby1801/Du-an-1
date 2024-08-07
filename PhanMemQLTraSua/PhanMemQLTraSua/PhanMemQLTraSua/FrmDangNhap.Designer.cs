@@ -158,6 +158,7 @@
             // Cb_ShowPass
             // 
             this.Cb_ShowPass.AutoSize = true;
+            this.Cb_ShowPass.BackColor = System.Drawing.Color.Transparent;
             this.Cb_ShowPass.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb_ShowPass.Location = new System.Drawing.Point(586, 190);
             this.Cb_ShowPass.Name = "Cb_ShowPass";
@@ -165,7 +166,7 @@
             this.Cb_ShowPass.TabIndex = 11;
             this.Cb_ShowPass.Text = "Hiển Thị Mật Khẩu";
             this.Cb_ShowPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Cb_ShowPass.UseVisualStyleBackColor = true;
+            this.Cb_ShowPass.UseVisualStyleBackColor = false;
             this.Cb_ShowPass.CheckedChanged += new System.EventHandler(this.Cb_ShowPass_CheckedChanged);
             // 
             // btnThoat

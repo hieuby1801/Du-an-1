@@ -36,6 +36,9 @@
             this.Mtb2 = new System.Windows.Forms.MaskedTextBox();
             this.btThongKe = new System.Windows.Forms.Button();
             this.btEX = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_doanhThuNgay = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataGR)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +84,7 @@
             // Mtb1
             // 
             this.Mtb1.Location = new System.Drawing.Point(294, 62);
-            this.Mtb1.Mask = "00/00/0000";
+            this.Mtb1.Mask = "0000/00/00";
             this.Mtb1.Name = "Mtb1";
             this.Mtb1.Size = new System.Drawing.Size(100, 22);
             this.Mtb1.TabIndex = 4;
@@ -90,7 +93,7 @@
             // Mtb2
             // 
             this.Mtb2.Location = new System.Drawing.Point(553, 65);
-            this.Mtb2.Mask = "00/00/0000";
+            this.Mtb2.Mask = "0000/00/00";
             this.Mtb2.Name = "Mtb2";
             this.Mtb2.Size = new System.Drawing.Size(100, 22);
             this.Mtb2.TabIndex = 5;
@@ -120,12 +123,44 @@
             this.btEX.UseVisualStyleBackColor = false;
             this.btEX.Click += new System.EventHandler(this.btEX_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(64, 500);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(195, 29);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Doanh thu Ngày: ";
+            // 
+            // lbl_doanhThuNgay
+            // 
+            this.lbl_doanhThuNgay.AutoSize = true;
+            this.lbl_doanhThuNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_doanhThuNgay.Location = new System.Drawing.Point(330, 503);
+            this.lbl_doanhThuNgay.Name = "lbl_doanhThuNgay";
+            this.lbl_doanhThuNgay.Size = new System.Drawing.Size(0, 25);
+            this.lbl_doanhThuNgay.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(415, 499);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 29);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "VNĐ";
+            // 
             // FrmThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(969, 487);
+            this.ClientSize = new System.Drawing.Size(969, 557);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbl_doanhThuNgay);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btEX);
             this.Controls.Add(this.btThongKe);
             this.Controls.Add(this.Mtb2);
@@ -154,5 +189,8 @@
         private System.Windows.Forms.MaskedTextBox Mtb2;
         private System.Windows.Forms.Button btThongKe;
         private System.Windows.Forms.Button btEX;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_doanhThuNgay;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -20,9 +20,9 @@ namespace PhanMemQLTraSua
 
         private void FrmThongKe_Load(object sender, EventArgs e)
         {
-            Mtb1.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            Mtb2.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            
+            Mtb1.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            Mtb2.Text = DateTime.Now.ToString("yyyy/MM/dd");
+
         }
 
         private void DataGR_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -33,7 +33,8 @@ namespace PhanMemQLTraSua
         private void btThongKe_Click(object sender, EventArgs e)
         {
             
-            DataGR.DataSource = HoaDonDAL.Instance.DSHoaDon();
+            DataGR.DataSource = HoaDonDAL.Instance.LoadThongKeHD(Mtb1.Text);
+            lbl_doanhThuNgay.Text = HoaDonDAL.Instance.DoanhThuNgay(Mtb1.Text).ToString();
         }
 
         private void btEX_Click(object sender, EventArgs e)

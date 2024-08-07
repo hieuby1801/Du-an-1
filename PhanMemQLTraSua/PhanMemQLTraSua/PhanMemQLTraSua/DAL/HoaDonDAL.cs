@@ -78,5 +78,19 @@ namespace PhanMemQLTraSua.DAL
             if (resultUpdate > 0) return true;
             return false;
         }
+
+        public DataTable LoadThongKeHD(string date)
+        {
+            string query = string.Format("exec spThongKe '{0}'", date);
+            DataTable dt = new DataTable();
+            dt = DataProvider.Instance.ExcuteQuery(query);
+            return dt;
+        }
+
+        public int DoanhThuNgay(string date)
+        {
+            string query = string.Format("exec spThongKeTongTien '{0}'", date);
+            return Convert.ToInt32(DataProvider.Instance.ExcuteScalar(query));
+        }
     }
 }
