@@ -31,9 +31,7 @@
             this.DataGR = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.Mtb1 = new System.Windows.Forms.MaskedTextBox();
-            this.Mtb2 = new System.Windows.Forms.MaskedTextBox();
             this.btThongKe = new System.Windows.Forms.Button();
             this.btEX = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,7 +55,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, 13);
+            this.label1.Location = new System.Drawing.Point(96, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(280, 34);
             this.label1.TabIndex = 1;
@@ -66,38 +64,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(200, 65);
+            this.label2.Location = new System.Drawing.Point(431, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 16);
+            this.label2.Size = new System.Drawing.Size(40, 16);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Từ Ngày";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(452, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 16);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Tới Ngày";
+            this.label2.Text = "Ngày";
             // 
             // Mtb1
             // 
-            this.Mtb1.Location = new System.Drawing.Point(294, 62);
+            this.Mtb1.Location = new System.Drawing.Point(525, 65);
             this.Mtb1.Mask = "0000/00/00";
             this.Mtb1.Name = "Mtb1";
             this.Mtb1.Size = new System.Drawing.Size(100, 22);
             this.Mtb1.TabIndex = 4;
             this.Mtb1.ValidatingType = typeof(System.DateTime);
-            // 
-            // Mtb2
-            // 
-            this.Mtb2.Location = new System.Drawing.Point(553, 65);
-            this.Mtb2.Mask = "0000/00/00";
-            this.Mtb2.Name = "Mtb2";
-            this.Mtb2.Size = new System.Drawing.Size(100, 22);
-            this.Mtb2.TabIndex = 5;
-            this.Mtb2.ValidatingType = typeof(System.DateTime);
             // 
             // btThongKe
             // 
@@ -163,9 +143,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btEX);
             this.Controls.Add(this.btThongKe);
-            this.Controls.Add(this.Mtb2);
             this.Controls.Add(this.Mtb1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DataGR);
@@ -184,9 +162,7 @@
         private System.Windows.Forms.DataGridView DataGR;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox Mtb1;
-        private System.Windows.Forms.MaskedTextBox Mtb2;
         private System.Windows.Forms.Button btThongKe;
         private System.Windows.Forms.Button btEX;
         private System.Windows.Forms.Label label4;
