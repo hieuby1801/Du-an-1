@@ -22,9 +22,9 @@ namespace PhanMemQLTraSua
             txtMaNV.ReadOnly = true;
             txtSDT.ReadOnly = true;
             txtHoTen.ReadOnly = true;
-            txtTinhTrang.ReadOnly = true;
+            cboTinhTrang.Enabled = true;
             txtDiaChi.ReadOnly = true;
-            txtVaiTro.ReadOnly = true;
+            cboVaiTro.Enabled = true;
             txtMK.ReadOnly = true;
             btnLuu.Enabled = false;
             btnXoa2.Enabled = false;
@@ -68,9 +68,9 @@ namespace PhanMemQLTraSua
             string maNV = txtMaNV.Text;
             string sdt = txtSDT.Text;
             string tenNV = txtHoTen.Text;
-            int tinhTrang = Convert.ToInt16(txtTinhTrang.Text);
+            int tinhTrang = Convert.ToInt16(cboTinhTrang.Text);
             string diaChi = txtDiaChi.Text;
-            int vaiTro = Convert.ToInt16(txtVaiTro.Text);   
+            int vaiTro = Convert.ToInt16(cboVaiTro.Text);   
             string matKhau = txtMK.Text;
             if (them)
                 ThemNhanVien(maNV, sdt, tenNV, tinhTrang, diaChi, vaiTro, matKhau);
@@ -99,16 +99,16 @@ namespace PhanMemQLTraSua
             txtMaNV.Text = "";
             txtSDT.Text = "";
             txtHoTen.Text = "";
-            txtTinhTrang.Text = "";
+            cboTinhTrang.Text = "";
             txtDiaChi.Text = "";
-            txtVaiTro.Text = "";
+            cboVaiTro.Text = "";
             txtMK.Text = "";
             txtMaNV.ReadOnly = true;
             txtSDT.ReadOnly = true;
             txtHoTen.ReadOnly = true;
-            txtTinhTrang.ReadOnly = true;
+            cboTinhTrang.Enabled = true;
             txtDiaChi.ReadOnly = true;
-            txtVaiTro.ReadOnly = true;
+            cboVaiTro.Enabled = true;
             txtMK.ReadOnly = true;
             btnLuu.Enabled = false;
             btnXoa2.Enabled = false;
@@ -128,9 +128,9 @@ namespace PhanMemQLTraSua
                 txtMaNV.Text = row.Cells[1].Value.ToString(); // Giả sử ô đầu tiên gán vào textBox1
                 txtSDT.Text = row.Cells[2].Value.ToString(); // Ô thứ hai gán vào textBox2
                 txtHoTen.Text = row.Cells[3].Value.ToString();
-                txtTinhTrang.Text = row.Cells[4].Value.ToString();
+                cboTinhTrang.Text = row.Cells[4].Value.ToString();
                 txtDiaChi.Text = row.Cells[5].Value.ToString();
-                txtVaiTro.Text = row.Cells[6].Value.ToString();
+                cboVaiTro.Text = row.Cells[6].Value.ToString();
                 txtMK.Text = row.Cells[7].Value.ToString();// Ô thứ ba gán vào textBox3
             }
         }
@@ -141,9 +141,9 @@ namespace PhanMemQLTraSua
             txtMaNV.ReadOnly = false;
             txtSDT.ReadOnly = false;
             txtHoTen.ReadOnly = false;
-            txtTinhTrang.ReadOnly = false;
+            cboTinhTrang.Enabled = true;
             txtDiaChi.ReadOnly = false;
-            txtVaiTro.ReadOnly = false;
+            cboVaiTro.Enabled = true;
             txtMK.ReadOnly = false;
             btnLuu.Enabled = true;
             btnXoa2.Enabled = false;
@@ -158,9 +158,9 @@ namespace PhanMemQLTraSua
             txtMaNV.ReadOnly = true;
             txtSDT.ReadOnly = false;
             txtHoTen.ReadOnly = false;
-            txtTinhTrang.ReadOnly = false;
+            cboTinhTrang.Enabled = true;
             txtDiaChi.ReadOnly = false;
-            txtVaiTro.ReadOnly = false;
+            cboVaiTro.Enabled = true;
             txtMK.ReadOnly = false;
             btnLuu.Enabled = true;
             btnXoa2.Enabled = false;
@@ -179,9 +179,9 @@ namespace PhanMemQLTraSua
             txtMaNV.ReadOnly = true;
             txtSDT.ReadOnly = true;
             txtHoTen.ReadOnly = true;
-            txtTinhTrang.ReadOnly = true;
+            cboTinhTrang.Enabled = true;
             txtDiaChi.ReadOnly = true;
-            txtVaiTro.ReadOnly = true;
+            cboVaiTro.Enabled = true;
             txtMK.ReadOnly = true;
             btnLuu.Enabled = false;
             btnCapNhat.Enabled = false;
@@ -195,7 +195,7 @@ namespace PhanMemQLTraSua
         {
             XoaNhanVien(txtMaNV.Text);
             LoadDSNhanVien();
-
+            LamMoi();
         }
     }
 }
