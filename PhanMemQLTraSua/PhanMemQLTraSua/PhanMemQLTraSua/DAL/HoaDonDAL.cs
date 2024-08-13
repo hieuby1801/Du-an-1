@@ -92,5 +92,21 @@ namespace PhanMemQLTraSua.DAL
             string query = string.Format("exec spThongKeTongTien '{0}'", date);
             return Convert.ToInt32(DataProvider.Instance.ExcuteScalar(query));
         }
+
+        public int XoaHoaDon(string maHD)// chưa làm xong chức năng xoá hd bên frm
+        {
+            string query = string.Format("delete from HoaDonChiTiet where maHD = '{0}'", maHD);
+            string query1 = string.Format("delete from HoaDon where maHD = '{0}'", maHD);
+            try
+            {
+                return DataProvider.Instance.ExcuteNonQuery(query)+ DataProvider.Instance.ExcuteNonQuery(query1);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally { }
+            return 0;
+        }
     }
 }

@@ -30,9 +30,7 @@
         {
             this.tblPnlMain = new System.Windows.Forms.TableLayoutPanel();
             this.tblPnlDataEntry = new System.Windows.Forms.TableLayoutPanel();
-            this.txtTinhTrang = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
-            this.txtVaiTro = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtMK = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
@@ -56,6 +54,8 @@
             this.dataGridViewNhanVien = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cboVaiTro = new System.Windows.Forms.ComboBox();
+            this.cboTinhTrang = new System.Windows.Forms.ComboBox();
             this.tblPnlMain.SuspendLayout();
             this.tblPnlDataEntry.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -96,9 +96,8 @@
             this.tblPnlDataEntry.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tblPnlDataEntry.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tblPnlDataEntry.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblPnlDataEntry.Controls.Add(this.txtTinhTrang, 1, 3);
+            this.tblPnlDataEntry.Controls.Add(this.cboTinhTrang, 1, 3);
             this.tblPnlDataEntry.Controls.Add(this.txtSDT, 3, 2);
-            this.tblPnlDataEntry.Controls.Add(this.txtVaiTro, 1, 2);
             this.tblPnlDataEntry.Controls.Add(this.txtDiaChi, 3, 1);
             this.tblPnlDataEntry.Controls.Add(this.txtMK, 1, 1);
             this.tblPnlDataEntry.Controls.Add(this.txtHoTen, 3, 0);
@@ -111,6 +110,7 @@
             this.tblPnlDataEntry.Controls.Add(this.label8, 0, 1);
             this.tblPnlDataEntry.Controls.Add(this.txtMaNV, 1, 0);
             this.tblPnlDataEntry.Controls.Add(this.tableLayoutPanel1, 3, 3);
+            this.tblPnlDataEntry.Controls.Add(this.cboVaiTro, 1, 2);
             this.tblPnlDataEntry.Location = new System.Drawing.Point(3, 3);
             this.tblPnlDataEntry.Name = "tblPnlDataEntry";
             this.tblPnlDataEntry.RowCount = 4;
@@ -122,14 +122,6 @@
             this.tblPnlDataEntry.TabIndex = 0;
             this.tblPnlDataEntry.Paint += new System.Windows.Forms.PaintEventHandler(this.tblPnlDataEntry_Paint);
             // 
-            // txtTinhTrang
-            // 
-            this.txtTinhTrang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTinhTrang.Location = new System.Drawing.Point(103, 147);
-            this.txtTinhTrang.Name = "txtTinhTrang";
-            this.txtTinhTrang.Size = new System.Drawing.Size(467, 22);
-            this.txtTinhTrang.TabIndex = 13;
-            // 
             // txtSDT
             // 
             this.txtSDT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -137,14 +129,6 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(467, 22);
             this.txtSDT.TabIndex = 12;
-            // 
-            // txtVaiTro
-            // 
-            this.txtVaiTro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVaiTro.Location = new System.Drawing.Point(103, 102);
-            this.txtVaiTro.Name = "txtVaiTro";
-            this.txtVaiTro.Size = new System.Drawing.Size(467, 22);
-            this.txtVaiTro.TabIndex = 11;
             // 
             // txtDiaChi
             // 
@@ -443,6 +427,30 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // cboVaiTro
+            // 
+            this.cboVaiTro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboVaiTro.FormattingEnabled = true;
+            this.cboVaiTro.Items.AddRange(new object[] {
+            "0",
+            "1"});
+            this.cboVaiTro.Location = new System.Drawing.Point(103, 101);
+            this.cboVaiTro.Name = "cboVaiTro";
+            this.cboVaiTro.Size = new System.Drawing.Size(467, 24);
+            this.cboVaiTro.TabIndex = 15;
+            // 
+            // cboTinhTrang
+            // 
+            this.cboTinhTrang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboTinhTrang.FormattingEnabled = true;
+            this.cboTinhTrang.Items.AddRange(new object[] {
+            "0",
+            "1"});
+            this.cboTinhTrang.Location = new System.Drawing.Point(103, 146);
+            this.cboTinhTrang.Name = "cboTinhTrang";
+            this.cboTinhTrang.Size = new System.Drawing.Size(467, 24);
+            this.cboTinhTrang.TabIndex = 16;
+            // 
             // FrmQLNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -479,9 +487,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtTinhTrang;
         private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.TextBox txtVaiTro;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtMK;
         private System.Windows.Forms.TextBox txtHoTen;
@@ -498,5 +504,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridViewNhanVien;
+        private System.Windows.Forms.ComboBox cboVaiTro;
+        private System.Windows.Forms.ComboBox cboTinhTrang;
     }
 }

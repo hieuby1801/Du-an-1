@@ -21,7 +21,6 @@ namespace PhanMemQLTraSua
         private void FrmThongKe_Load(object sender, EventArgs e)
         {
             Mtb1.Text = DateTime.Now.ToString("yyyy/MM/dd");
-            Mtb2.Text = DateTime.Now.ToString("yyyy/MM/dd");
 
         }
 

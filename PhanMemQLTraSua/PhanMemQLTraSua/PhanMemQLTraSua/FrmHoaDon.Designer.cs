@@ -34,6 +34,7 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btnThemHD = new System.Windows.Forms.Button();
             this.btnXoaHD = new System.Windows.Forms.Button();
+            this.btnXuatHD = new System.Windows.Forms.Button();
             this.dataGridViewDSHD = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -56,7 +57,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.btnXuatHD = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -151,6 +151,18 @@
             this.btnXoaHD.TabIndex = 1;
             this.btnXoaHD.Text = "Xoá HĐ";
             this.btnXoaHD.UseVisualStyleBackColor = true;
+            this.btnXoaHD.Click += new System.EventHandler(this.btnXoaHD_Click);
+            // 
+            // btnXuatHD
+            // 
+            this.btnXuatHD.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnXuatHD.Location = new System.Drawing.Point(578, 5);
+            this.btnXuatHD.Name = "btnXuatHD";
+            this.btnXuatHD.Size = new System.Drawing.Size(88, 40);
+            this.btnXuatHD.TabIndex = 2;
+            this.btnXuatHD.Text = "Xuất HĐ";
+            this.btnXuatHD.UseVisualStyleBackColor = true;
+            this.btnXuatHD.Click += new System.EventHandler(this.btnXuatHD_Click);
             // 
             // dataGridViewDSHD
             // 
@@ -352,27 +364,107 @@
             // dudSoLuong
             // 
             this.dudSoLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dudSoLuong.Items.Add("0");
-            this.dudSoLuong.Items.Add("1");
-            this.dudSoLuong.Items.Add("2");
-            this.dudSoLuong.Items.Add("3");
-            this.dudSoLuong.Items.Add("4");
-            this.dudSoLuong.Items.Add("5");
-            this.dudSoLuong.Items.Add("6");
-            this.dudSoLuong.Items.Add("7");
-            this.dudSoLuong.Items.Add("8");
-            this.dudSoLuong.Items.Add("9");
-            this.dudSoLuong.Items.Add("10");
-            this.dudSoLuong.Items.Add("11");
-            this.dudSoLuong.Items.Add("12");
-            this.dudSoLuong.Items.Add("13");
-            this.dudSoLuong.Items.Add("14");
-            this.dudSoLuong.Items.Add("15");
-            this.dudSoLuong.Items.Add("16");
-            this.dudSoLuong.Items.Add("17");
-            this.dudSoLuong.Items.Add("18");
-            this.dudSoLuong.Items.Add("19");
+            this.dudSoLuong.Items.Add("100");
+            this.dudSoLuong.Items.Add("99");
+            this.dudSoLuong.Items.Add("98");
+            this.dudSoLuong.Items.Add("97");
+            this.dudSoLuong.Items.Add("96");
+            this.dudSoLuong.Items.Add("95");
+            this.dudSoLuong.Items.Add("94");
+            this.dudSoLuong.Items.Add("93");
+            this.dudSoLuong.Items.Add("92");
+            this.dudSoLuong.Items.Add("91");
+            this.dudSoLuong.Items.Add("90");
+            this.dudSoLuong.Items.Add("89");
+            this.dudSoLuong.Items.Add("88");
+            this.dudSoLuong.Items.Add("87");
+            this.dudSoLuong.Items.Add("86");
+            this.dudSoLuong.Items.Add("85");
+            this.dudSoLuong.Items.Add("84");
+            this.dudSoLuong.Items.Add("83");
+            this.dudSoLuong.Items.Add("82");
+            this.dudSoLuong.Items.Add("81");
+            this.dudSoLuong.Items.Add("80");
+            this.dudSoLuong.Items.Add("79");
+            this.dudSoLuong.Items.Add("78");
+            this.dudSoLuong.Items.Add("77");
+            this.dudSoLuong.Items.Add("76");
+            this.dudSoLuong.Items.Add("75");
+            this.dudSoLuong.Items.Add("74");
+            this.dudSoLuong.Items.Add("73");
+            this.dudSoLuong.Items.Add("72");
+            this.dudSoLuong.Items.Add("71");
+            this.dudSoLuong.Items.Add("70");
+            this.dudSoLuong.Items.Add("69");
+            this.dudSoLuong.Items.Add("68");
+            this.dudSoLuong.Items.Add("67");
+            this.dudSoLuong.Items.Add("66");
+            this.dudSoLuong.Items.Add("65");
+            this.dudSoLuong.Items.Add("64");
+            this.dudSoLuong.Items.Add("63");
+            this.dudSoLuong.Items.Add("62");
+            this.dudSoLuong.Items.Add("61");
+            this.dudSoLuong.Items.Add("60");
+            this.dudSoLuong.Items.Add("59");
+            this.dudSoLuong.Items.Add("58");
+            this.dudSoLuong.Items.Add("57");
+            this.dudSoLuong.Items.Add("56");
+            this.dudSoLuong.Items.Add("55");
+            this.dudSoLuong.Items.Add("54");
+            this.dudSoLuong.Items.Add("53");
+            this.dudSoLuong.Items.Add("52");
+            this.dudSoLuong.Items.Add("51");
+            this.dudSoLuong.Items.Add("50");
+            this.dudSoLuong.Items.Add("49");
+            this.dudSoLuong.Items.Add("48");
+            this.dudSoLuong.Items.Add("47");
+            this.dudSoLuong.Items.Add("46");
+            this.dudSoLuong.Items.Add("45");
+            this.dudSoLuong.Items.Add("44");
+            this.dudSoLuong.Items.Add("43");
+            this.dudSoLuong.Items.Add("42");
+            this.dudSoLuong.Items.Add("41");
+            this.dudSoLuong.Items.Add("40");
+            this.dudSoLuong.Items.Add("39");
+            this.dudSoLuong.Items.Add("38");
+            this.dudSoLuong.Items.Add("37");
+            this.dudSoLuong.Items.Add("36");
+            this.dudSoLuong.Items.Add("35");
+            this.dudSoLuong.Items.Add("34");
+            this.dudSoLuong.Items.Add("33");
+            this.dudSoLuong.Items.Add("32");
+            this.dudSoLuong.Items.Add("31");
+            this.dudSoLuong.Items.Add("30");
+            this.dudSoLuong.Items.Add("29");
+            this.dudSoLuong.Items.Add("28");
+            this.dudSoLuong.Items.Add("27");
+            this.dudSoLuong.Items.Add("26");
+            this.dudSoLuong.Items.Add("25");
+            this.dudSoLuong.Items.Add("24");
+            this.dudSoLuong.Items.Add("23");
+            this.dudSoLuong.Items.Add("22");
+            this.dudSoLuong.Items.Add("21");
             this.dudSoLuong.Items.Add("20");
+            this.dudSoLuong.Items.Add("19");
+            this.dudSoLuong.Items.Add("18");
+            this.dudSoLuong.Items.Add("17");
+            this.dudSoLuong.Items.Add("16");
+            this.dudSoLuong.Items.Add("15");
+            this.dudSoLuong.Items.Add("14");
+            this.dudSoLuong.Items.Add("13");
+            this.dudSoLuong.Items.Add("12");
+            this.dudSoLuong.Items.Add("11");
+            this.dudSoLuong.Items.Add("10");
+            this.dudSoLuong.Items.Add("9");
+            this.dudSoLuong.Items.Add("8");
+            this.dudSoLuong.Items.Add("7");
+            this.dudSoLuong.Items.Add("6");
+            this.dudSoLuong.Items.Add("5");
+            this.dudSoLuong.Items.Add("4");
+            this.dudSoLuong.Items.Add("3");
+            this.dudSoLuong.Items.Add("2");
+            this.dudSoLuong.Items.Add("1");
+            this.dudSoLuong.Items.Add("0");
             this.dudSoLuong.Location = new System.Drawing.Point(49, 21);
             this.dudSoLuong.Name = "dudSoLuong";
             this.dudSoLuong.Size = new System.Drawing.Size(120, 22);
@@ -441,17 +533,6 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // btnXuatHD
-            // 
-            this.btnXuatHD.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnXuatHD.Location = new System.Drawing.Point(578, 5);
-            this.btnXuatHD.Name = "btnXuatHD";
-            this.btnXuatHD.Size = new System.Drawing.Size(88, 40);
-            this.btnXuatHD.TabIndex = 2;
-            this.btnXuatHD.Text = "Xuất HĐ";
-            this.btnXuatHD.UseVisualStyleBackColor = true;
-            this.btnXuatHD.Click += new System.EventHandler(this.btnXuatHD_Click);
             // 
             // FrmHoaDon
             // 

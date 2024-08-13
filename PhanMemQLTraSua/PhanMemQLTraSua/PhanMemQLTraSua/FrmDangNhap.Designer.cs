@@ -78,7 +78,7 @@
             this.txtmatkhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtmatkhau.Name = "txtmatkhau";
             this.txtmatkhau.Size = new System.Drawing.Size(176, 22);
-            this.txtmatkhau.TabIndex = 3;
+            this.txtmatkhau.TabIndex = 1;
             this.txtmatkhau.UseSystemPasswordChar = true;
             this.txtmatkhau.TextChanged += new System.EventHandler(this.txtmatkhau_TextChanged);
             // 
@@ -88,7 +88,7 @@
             this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(176, 22);
-            this.txtTaiKhoan.TabIndex = 2;
+            this.txtTaiKhoan.TabIndex = 1;
             // 
             // llbllienhe
             // 
@@ -97,7 +97,7 @@
             this.llbllienhe.Location = new System.Drawing.Point(459, 321);
             this.llbllienhe.Name = "llbllienhe";
             this.llbllienhe.Size = new System.Drawing.Size(58, 18);
-            this.llbllienhe.TabIndex = 4;
+            this.llbllienhe.TabIndex = 6;
             this.llbllienhe.TabStop = true;
             this.llbllienhe.Text = "Liên Hệ";
             // 
@@ -108,7 +108,7 @@
             this.llblhuongdan.Location = new System.Drawing.Point(724, 321);
             this.llblhuongdan.Name = "llblhuongdan";
             this.llblhuongdan.Size = new System.Drawing.Size(83, 18);
-            this.llblhuongdan.TabIndex = 5;
+            this.llblhuongdan.TabIndex = 7;
             this.llblhuongdan.TabStop = true;
             this.llblhuongdan.Text = "Hướng Dẫn";
             // 
@@ -150,7 +150,7 @@
             this.btndangnhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btndangnhap.Name = "btndangnhap";
             this.btndangnhap.Size = new System.Drawing.Size(102, 38);
-            this.btndangnhap.TabIndex = 10;
+            this.btndangnhap.TabIndex = 4;
             this.btndangnhap.Text = "Đăng Nhập";
             this.btndangnhap.UseVisualStyleBackColor = false;
             this.btndangnhap.Click += new System.EventHandler(this.btndangnhap_Click);
@@ -163,7 +163,7 @@
             this.Cb_ShowPass.Location = new System.Drawing.Point(586, 190);
             this.Cb_ShowPass.Name = "Cb_ShowPass";
             this.Cb_ShowPass.Size = new System.Drawing.Size(145, 21);
-            this.Cb_ShowPass.TabIndex = 11;
+            this.Cb_ShowPass.TabIndex = 3;
             this.Cb_ShowPass.Text = "Hiển Thị Mật Khẩu";
             this.Cb_ShowPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Cb_ShowPass.UseVisualStyleBackColor = false;
@@ -177,7 +177,7 @@
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(102, 38);
-            this.btnThoat.TabIndex = 12;
+            this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);

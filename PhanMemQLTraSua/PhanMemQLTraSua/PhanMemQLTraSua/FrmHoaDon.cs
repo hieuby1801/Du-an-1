@@ -247,6 +247,27 @@ namespace PhanMemQLTraSua
             HoaDonChiTietDAL.Instance.xuatHD(maHD);
         }
 
+        private void btnXoaHD_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa hoá đơn có mã " + maHD + " không?", "Xác nhận xóa", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            // Nếu người dùng chọn OK
+            if (result == DialogResult.OK)
+            {
+                if (HoaDonDAL.Instance.XoaHoaDon(maHD.ToString()) > 0)
+                MessageBox.Show("Đã xóa thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                MessageBox.Show("Xóa không thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                // Người dùng chọn Cancel, không làm gì cả
+            }
+            LoadDSHD();
+            dataGridView1.DataSource = null;
+        }
+
         private void dataGridViewDSHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             bool isOpen = true;
