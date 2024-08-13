@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace PhanMemQLTraSua.DAL
@@ -42,7 +43,7 @@ namespace PhanMemQLTraSua.DAL
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("Trùng Mã Nhân Viên");
             }
             finally { }
         }
